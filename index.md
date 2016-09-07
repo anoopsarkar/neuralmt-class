@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Course Information
-img: positronic
-img_link: "https://en.wikipedia.org/wiki/Positronic_brain"
-caption: "A positronic brain is a fictional technological device, originally conceived by science fiction writer Isaac Asimov. When Asimov wrote his first robot stories in 1939 and 1940, the positron was a newly discovered particle, and so the buzz word positronic added a contemporary gloss of popular science to the concept."
+img: kb2013
+img_link: "http://www.aclweb.org/anthology/D13-1176"
+caption: "Kalchbrenner and Blunsom (EMNLP 2013) introduced the notion of encoding the input into a continuous representation and then generating the output translation from it."
 active_tab: main_page 
 ---
 

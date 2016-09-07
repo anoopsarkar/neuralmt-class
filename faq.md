@@ -1,8 +1,8 @@
 ---
 layout: default
-img: hal9k
-img_link: "http://en.wikipedia.org/wiki/HAL_9000"
-caption: "In 2001 A Space Odyssey, HAL 9000 speaks in a calm voice and conversational manner in constrast to the humans."
+img: positronic
+img_link: "https://en.wikipedia.org/wiki/Positronic_brain"
+caption: "A positronic brain is a fictional technological device, originally conceived by science fiction writer Isaac Asimov."
 title: FAQ
 active_tab: faq
 ---

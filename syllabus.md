@@ -1,8 +1,8 @@
 ---
 layout: default
 img: encoderdecoder
-img_link: "http://104.131.78.120/"
-caption: "Neural Machine Translation Demo from the LISA Lab at the University of Montreal. Try it out!"
+img_link: "https://arxiv.org/abs/1406.1078"
+caption: "Cho et al (EMNLP 2014) describe a Recursive Neural Network based Encoder-Decoder for Neural Machine Translation."
 title: Syllabus
 active_tab: syllabus
 ---
