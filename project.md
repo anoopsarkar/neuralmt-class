@@ -1,8 +1,8 @@
 ---
 layout: default
-img: escherbabel
-img_link: http://en.wikipedia.org/wiki/Tower_of_Babel_(M._C._Escher)
-caption: "1928 woodcut by M. C. Escher showing the Tower of Babel."
+img: tensorflow
+img_link: "https://www.tensorflow.org/"
+caption: "Tensor Flow is a popular open source library for building RNNs (and other useful things)."
 title: "Project"
 active_tab: project
 ---
@@ -11,6 +11,20 @@ Final Project
 -------------
 
 The goal for each final project is a submission to a conference at the end of the semester (perhaps with some more work on the paper in the Spring semester).
+
+## Software
+
+### lamtram/cnn
+
+[lamtram](https://github.com/neubig/lamtram): A toolkit for neural language and translation modeling
+
+### Tensor Flow
+
+https://www.tensorflow.org/
+
+### nematus/Theano
+
+[nematus](https://github.com/rsennrich/nematus) based on Kyunghun Cho's [dl4mt tutorial](https://github.com/nyu-dl/dl4mt-tutorial).
 
 ## Project Ideas
 
@@ -34,5 +48,4 @@ Can we improve on computational decipherment methods by using neural LMs and goi
 A more ambitious idea is to map images of text to language models bypassing the possibly error-prone human element in converting
 the visual script to machine readable text. For instance, scans of the Voynich manuscript are available from the Yale library.
 Can they be mapped to another language for which we have a language model.
-
 

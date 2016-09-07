@@ -1,8 +1,8 @@
 ---
 layout: default
-img: escherbabel
-img_link: http://en.wikipedia.org/wiki/Tower_of_Babel_(M._C._Escher)
-caption: "1928 woodcut by M. C. Escher showing the Tower of Babel."
+img: tensorflow
+img_link: "https://www.tensorflow.org/"
+caption: "Tensor Flow is a popular open source library for building RNNs (and other useful things)."
 title: "Project 3: Encoder-Decoder"
 active_tab: project
 ---
