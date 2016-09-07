@@ -40,8 +40,8 @@ Textbook
 Grading
 : Submit project source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/)
 
-* Programming setup homework: Sep 13 (2%)
-* Five programming homeworks. Due dates: Sep 27, Oct 11, Oct 25, Nov 8, Nov 22 (10% each)
-* In class midterm: Nov 3 (18%)
-* Final project: Dec 8 (30%)
+* In class presentations: 30%
+* Scribing: 20%
+* Project stages: Project 1, 2 and 3; 10% each.
+* Final project: 20%.
 
