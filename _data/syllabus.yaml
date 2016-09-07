@@ -1,0 +1,6 @@
+- title: "Course Introduction"
+  tag: week1
+  current: true
+  notes:
+    - title: "Statistical Machine Translation"
+      url: "assets/slides/tba.pdf"

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFU NLP class: Homework | Setup</title>
+
+    <!-- CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="assets/css/nlp-class.css" rel="stylesheet">   
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript"
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-fixed-top navbar-default" role="banner">
+      <div class="container">
+        <div class="row">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav navbar-nav">
+            <li id="main_page"><a href="index.html" class="navbar-brand">Natural Language Processing</a></li>
+          </ul>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li id="syllabus"><a href="syllabus.html">Syllabus</a></li>
+            <li id="homework">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Homework <span class="caret"></span></a>
+              <ol class="dropdown-menu">
+                <li><a href="hw0.html">0. Setup</a></li>
+                <li><a href="hw1.html">1. Word Segmentation</a></li>
+                <li><a href="hw2.html">2. Phrasal Chunking</a></li>
+                <li><a href="hw3.html">3. Word Alignment</a></li>
+                <li><a href="hw4.html">4. Translation Decoding</a></li>
+                <li><a href="hw5.html">5. Translation Reranking</a></li>
+              </ol>
+            </li>
+            <li id="leaderboard"><a href="leaderboard.html">Leaderboard</a></li>
+            <li id="project"><a href="project.html">Project</a></li>
+            <li id="faq"><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 hidden-sm hidden-xs">
+          <a href="http://en.wikipedia.org/wiki/Blade_Runner"> 
+          <img src="assets/img/vk.jpg" class="img-responsive img-rounded" alt=""/>
+          </a> 
+          <span class="text-muted"><i>In Blade Runner, a conversation distinguishes replicants from humans.</i></span>
+        </div>
+        <div class="col-sm-10">
+          <h1 id="homework--leaderboard-setup">Homework &amp; Leaderboard setup</h1>
+
+<p class="text-muted">Due on Tuesday, September 13, 2016</p>
+
+<p>For this course, we use <a href="http://sfu-nlp-class.appspot.com">an automated homework submission
+system</a> built on <a href="https://appengine.google.com">Google App
+Engine</a>. One component of this system
+is the <a href="leaderboard.html">leaderboard</a>, which introduces a competitive
+element into the assignments with realtime display of group submissions
+according to their scores on assignment metrics.</p>
+
+<p>You should follow the steps in this document to make sure that
+everything is working for you.</p>
+
+<ol>
+  <li>
+    <p>Join a group. The maximum group size is four. Decide on a group
+name. Make it memorable. Register yourself as a group on
+<a href="https://courses.cs.sfu.ca">Coursys</a>.</p>
+  </li>
+  <li>
+    <p>Visit the course submission page at
+<a href="http://sfu-nlp-class.appspot.com">sfu-nlp-class.appspot.com</a>. At
+least one person in your group will need a valid Google account.</p>
+  </li>
+  <li>
+    <p>This system is used to upload all homework assignments. You
+should use your group name as the handle when you submit your
+assignment. By default the leaderboard will use your Google nickname
+which cannot be used to assign your group a grade.</p>
+  </li>
+  <li>
+    <p>Homework 0 (this one) has been activated. Use the file submission
+dialog to upload your submissions. Check your status on the <a href="leaderboard.html">leaderboard</a></p>
+  </li>
+  <li>
+    <p>Upload a tar.gz or zip file as the HW0 submission on
+<a href="https://courses.cs.sfu.ca/2014fa-cmpt-413-x1/+hw0/">Coursys</a>.  In
+future assignments you will be uploading your source code and
+documentation as your submission.</p>
+  </li>
+</ol>
+
+<h2 id="homework-0">Homework 0</h2>
+
+<p>Homework 0 expects a file containing a single number. The leaderboard
+displays a simple nonmonotonic function of this number, and sorts
+the entries according to the highest value.</p>
+
+<p>To get full marks, you must do the following:</p>
+
+<ul>
+  <li>
+    <p>Upload and <em>Submit</em> your file on <a href="http://sfu-nlp-class.appspot.com/">the upload
+page</a>. There will be a dialog
+that says this is the final submission (you can no longer upload
+after you <em>Submit</em> your final answer. Do <strong>not</strong> press <em>Submit</em> if
+you plan to keep uploading new submissions. Only one person per group
+should submit for the group.</p>
+  </li>
+  <li>
+    <p>You must use a valid group name that is verifiable on
+<a href="https://courses.cs.sfu.ca">Coursys</a></p>
+  </li>
+  <li>
+    <p>Your group must upload your file as a tar.gz or zip file as the HW0
+submission on <a href="https://courses.cs.sfu.ca">Coursys</a>. Only one person
+per group needs to submit here as well.</p>
+  </li>
+</ul>
+
+<p>In future homeworks, you will submit your output files to the <a href="http://sfu-nlp-class.appspot.com">upload
+page on Google</a> and submit your
+source code to the submission page on <a href="https://courses.cs.sfu.ca">Coursys</a>.</p>
+
+
+        </div>
+      </div>
+
+      <footer class="text-center text-muted">
+        <hr/>
+        Last updated September 06, 2016.<br/>
+        Forked from the JHU MT class code on <a href="https://github.com/mt-class/jhu">github <i class="fa fa-github-alt"></i></a> by <a href="https://github.com/mjpost">Matt Post</a> and <a href="https://github.com/alopez">Adam Lopez</a>.<br/>
+        <br/><br/>
+      </footer>
+    </div>
+
+    <!-- Page content of course! -->
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#homework").addClass("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFU NLP class: Homework 2 | Chunking</title>
+
+    <!-- CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="assets/css/nlp-class.css" rel="stylesheet">   
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript"
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-fixed-top navbar-default" role="banner">
+      <div class="container">
+        <div class="row">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav navbar-nav">
+            <li id="main_page"><a href="index.html" class="navbar-brand">Natural Language Processing</a></li>
+          </ul>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li id="syllabus"><a href="syllabus.html">Syllabus</a></li>
+            <li id="homework">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Homework <span class="caret"></span></a>
+              <ol class="dropdown-menu">
+                <li><a href="hw0.html">0. Setup</a></li>
+                <li><a href="hw1.html">1. Word Segmentation</a></li>
+                <li><a href="hw2.html">2. Phrasal Chunking</a></li>
+                <li><a href="hw3.html">3. Word Alignment</a></li>
+                <li><a href="hw4.html">4. Translation Decoding</a></li>
+                <li><a href="hw5.html">5. Translation Reranking</a></li>
+              </ol>
+            </li>
+            <li id="leaderboard"><a href="leaderboard.html">Leaderboard</a></li>
+            <li id="project"><a href="project.html">Project</a></li>
+            <li id="faq"><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 hidden-sm hidden-xs">
+          <a href="http://weaver.nlplab.org/~brat/demo/latest/#/not-editable/CoNLL-00-Chunking/train.txt-doc-1"> 
+          <img src="assets/img/bratconll2k.jpg" class="img-responsive img-rounded" alt=""/>
+          </a> 
+          <span class="text-muted"><i>Explore phrasal chunking interactively using Brat</i></span>
+        </div>
+        <div class="col-sm-10">
+          <h1 id="phrasal-chunking-span-classtext-mutedhomework-2span">Phrasal Chunking <span class="text-muted">Homework 2</span></h1>
+
+<p class="text-muted">Due on Tuesday, October 11, 2016</p>
+
+<p>The syntax of a natural language, similar to the syntax of a programming language involves
+the arrangement of tokens into meaningful groups. Phrasal chunking is the task of finding 
+non-recursive syntactic groups of words. For example, the sentence:</p>
+
+<blockquote>
+  <p>He reckons the current account deficit will narrow to only # 1.8 billion in September .</p>
+</blockquote>
+
+<p>can be divided into phrasal chunks as follows<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>:</p>
+
+<blockquote>
+  <p>[NP <span style="color: DarkBlue">He</span>] 
+[VP <span style="color: BlueViolet">reckons</span>] 
+[NP <span style="color: DarkBlue">the current account deficit</span>] 
+[VP <span style="color: BlueViolet">will narrow</span>] 
+[PP <span style="color: red">to</span>] 
+[NP <span style="color: DarkBlue">only # 1.8 billion</span>] 
+[PP <span style="color: red">in</span>] 
+[NP <span style="color: DarkBlue">September</span>] .</p>
+</blockquote>
+
+<h2 id="data-set">Data set</h2>
+
+<p>The train and test data consist of three columns separated by spaces.
+Each word has been put on a separate line and there is an empty
+line after each sentence.</p>
+
+<p>The first column contains the current word, the second column is
+the part-of-speech tag for that word, and the third column is
+the chunk tag.</p>
+
+<p>Here is an example of the file format:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>He        PRP  B-NP
+reckons   VBZ  B-VP
+the       DT   B-NP
+current   JJ   I-NP
+account   NN   I-NP
+deficit   NN   I-NP
+will      MD   B-VP
+narrow    VB   I-VP
+to        TO   B-PP
+only      RB   B-NP
+#         #    I-NP
+1.8       CD   I-NP
+billion   CD   I-NP
+in        IN   B-PP
+September NNP  B-NP
+.         .    O
+</code></pre>
+</div>
+
+<p>The chunk tags contain the name of the chunk type, for example I-NP
+for noun phrase words and I-VP for verb phrase words.  Most chunk
+types have two types of chunk tags, B-CHUNK for the first word of
+the chunk and I-CHUNK for each other word in the chunk. See the
+Appendix below for a detailed description of the part-of-speech
+tags and the chunk tags in this data set. The full set of tags
+for this task is in the file <code class="highlighter-rouge">data/tagset.txt</code>.</p>
+
+<p>The sequence of labels, <code class="highlighter-rouge">B-NP</code>, …, <code class="highlighter-rouge">I-NP</code> represents a single
+phrasal chunk. For instance, the following sequence of labels:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>the       DT   B-NP
+current   JJ   I-NP
+account   NN   I-NP
+deficit   NN   I-NP
+</code></pre>
+</div>
+
+<p>gives us the NP phrase:</p>
+
+<blockquote>
+  <p>[NP <span style="color: DarkBlue">the current account deficit</span>]</p>
+</blockquote>
+
+<p>The O chunk tag is used for tokens which are not part of any chunk.</p>
+
+<p>The data set comes from the Conference on Natural Language Learning:
+<a href="http://www.cnts.ua.ac.be/conll2000/chunking/">CoNLL 2000 shared task</a><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>You must have git and python (2.7) on your system to run the assignments.</p>
+
+<p>If you have already cloned the <code class="highlighter-rouge">nlp-class-hw</code> repository for Homework 1,
+then do the following to get the files for Homework 2:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># go to the directory where you did a git clone for HW1
+cd nlp-class-hw 
+git pull origin master
+</code></pre>
+</div>
+
+<p>Or you can create a new directory that does a fresh clone of the repository:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/anoopsarkar/nlp-class-hw.git
+</code></pre>
+</div>
+
+<p>In the <code class="highlighter-rouge">chunker</code> directory you will find several python programs that you will
+use for this assignment.</p>
+
+<p>To count the number of labeled examples in the file format shown above, use <code class="highlighter-rouge">count-sentences.py</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python count-sentences.py -i data/train.txt.gz 
+8936
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">default.py</code> contains the default training algorithm for the chunking task.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python default.py -m default.model
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">perc.py</code> contains the implementation of the <script type="math/tex">\arg\max</script> search
+that computes the best sequence of chunk tags given an input sentence
+that has words and the part-of-speech tags for each word.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python perc.py -m default.model &gt; output
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">score-chunks.py</code> evaluates the output chunking for the input file, <code class="highlighter-rouge">data/input.txt.gz</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python score-chunks.py -t output
+</code></pre>
+</div>
+
+<p>You can also do the <script type="math/tex">\arg\max</script> search for the best sequence of
+chunk tags and the evaluation in one line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python perc.py -m default.model | python score-chunks.py
+</code></pre>
+</div>
+
+<p>This prints out the evaluation scores for <code class="highlighter-rouge">default.py</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>processed 250 sentences with 5460 tokens and 2997 phrases; found phrases: 6002; correct phrases: 477
+     ADJP: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:     53
+     ADVP: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:     96
+    CONJP: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:      2
+       NP: precision:   7.95%; recall:  30.13%; F1:  12.58; found:   6002; correct:   1583
+       PP: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:    626
+      PRT: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:     10
+     SBAR: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:     50
+       VP: precision:   0.00%; recall:   0.00%; F1:   0.00; found:      0; correct:    577
+accuracy:  25.57%; precision:   7.95%; recall:  15.92%; F1:  10.60
+Score: 10.60
+</code></pre>
+</div>
+
+<p>The overall score reported is the cumulative
+<a href="http://en.wikipedia.org/wiki/F1_score">F-measure</a> which combines
+<a href="http://en.wikipedia.org/wiki/Precision_and_recall">precision and recall</a>
+into a single score. The evaluation program also shows the precision, recall
+and F-measure for each phrase type in the list of chunking tags.</p>
+
+<p>For instance, the precision score for NP chunks is the number of
+correct NP chunks out of the number of NP chunks produced in the
+output, and the recall score for NP chunks is the number of correct
+NP chunks out of the number of NP chunks in the reference.</p>
+
+<h2 id="the-challenge">The Challenge</h2>
+
+<p>The main goal of this homework is to train a <a href="http://en.wikipedia.org/wiki/Structured_prediction">structured prediction
+model</a> for the
+phrasal chunking task. The search algorithm that provides the
+<script type="math/tex">\arg\max</script> sequence of output phrasal chunk labels is provided
+to you (in <code class="highlighter-rouge">perc.py</code>). Your job is to implement the training algorithm
+that provides weights for each feature used in the prediction by
+the model.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python your-trainer.py -m model
+python perc.py -m model &gt; output
+python score-chunks.py -t output
+</code></pre>
+</div>
+
+<p>You will upload the file <code class="highlighter-rouge">output</code> to the leaderboard submission
+site at <a href="http://sfu-nlp-class.appspot.com/">sfu-nlp-class.appspot.com</a>.</p>
+
+<p>By default, the training data is loaded from the following files:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>data/train.txt.gz
+data/train.feats.gz
+</code></pre>
+</div>
+
+<p>By default, the test data is loaded from the following files:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>data/input.txt.gz
+data/input.feats.gz
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">*.feats.gz</code> files are explained below in the description of
+the Baseline method.</p>
+
+<h3 id="the-baseline">The Baseline</h3>
+
+<p>The goal is to provide the best sequence of chunk tags for each input
+sentence. We will represent this task as a Hidden Markov Model and
+find the best sequence of output labels using the Viterbi algorithm.
+The Viterbi algorithm for HMMs has been provided to you in <code class="highlighter-rouge">perc.py</code>
+and this Viterbi implementation is used to find the <script type="math/tex">\arg\max</script> 
+sequence of output chunk tags.</p>
+
+<p>In the training data we are provided with a set of sentences, and
+each sentence has the reference output chunk labels. Each sentence
+is a sequence of words and other useful information such as
+part-of-speech tags which we refer to as <script type="math/tex">w_{[1:n]}</script>.  Each
+sequence of words is associated with a sequence of output labels
+<script type="math/tex">t_{[1:n]}</script>.</p>
+
+<p>This problem of assigning <script type="math/tex">t_{[1:n]}</script> to the input <script type="math/tex">w_{[1:n]}</script>
+is decomposed into a sequence of decisions in a left-to-right
+fashion. At each point there is a <em>history</em> which is the context
+in which the output label is assigned to a particular word <script type="math/tex">w_i</script>.
+A history is a three-tuple: <script type="math/tex">h = (t_{-1}, w_{[1:n]}, i)</script>, where
+<script type="math/tex">t_{-1}</script> is the output label for <script type="math/tex">w_{i-1}</script>. For each output
+label <script type="math/tex">t</script>, we can write a feature vector representation
+of history-tag pairs. Each component of the feature vector
+is called a feature function: <script type="math/tex">\phi_s(h, t)</script> where there 
+are <script type="math/tex">d</script> feature functions, <script type="math/tex">s = 1, \ldots, d</script>. 
+For instance, one such feature function might be:</p>
+
+<blockquote>
+  <p>If <script type="math/tex">w_i</script> is the word <code class="highlighter-rouge">the</code> and <script type="math/tex">t</script> is <code class="highlighter-rouge">B-NP</code> return 1
+else return 0</p>
+</blockquote>
+
+<p>Another feature function might look at the previous output label:</p>
+
+<blockquote>
+  <p>If <script type="math/tex">t_{-1}</script> is the label <code class="highlighter-rouge">B-NP</code> and <script type="math/tex">t</script> is <code class="highlighter-rouge">I-NP</code> return 1
+else return 0</p>
+</blockquote>
+
+<p>For this homework the feature functions have been provided to you
+and their values have been pre-computed in the <code class="highlighter-rouge">data/*.feats.gz</code>
+files. Details of the feature vector representation for this chunking
+task is provided in the Appendix below.</p>
+
+<p>From these local feature vectors we can create a feature vector
+for the entire sentence:</p>
+
+<p>$$ \Phi_s(w_{[1:n]}, t_{[1:n]}) = \sum_{i=1}^n \phi_s(h_i, t_i) $$</p>
+
+<p>The feature vector for the sentence <script type="math/tex">\Phi</script> has the same dimensionality
+as the feature vector for each tagging decision, <script type="math/tex">\phi</script>.</p>
+
+<h4 id="algorithm-perceptron-algorithm-for-hmms">Algorithm: Perceptron algorithm for HMMs</h4>
+
+<hr />
+<p><strong>## Data Structures ##</strong></p>
+
+<dl class="dl-horizontal">
+  <dt><code class="highlighter-rouge">train</code></dt>
+  <dd>sentences with output labels: <script type="math/tex">(w_{[1:n_j]}^{(j)}, t_{[1:n_j]}^{(j)})</script></dd>
+  <dt><code class="highlighter-rouge">T</code></dt>
+  <dd>number of epochs; in each epoch we iterate over all examples in the training set. <code class="highlighter-rouge">opts.numepochs</code> in <code class="highlighter-rouge">default.py</code></dd>
+  <dt><script type="math/tex">\phi</script></dt>
+  <dd>function that maps history/output-label pairs to <script type="math/tex">d</script>-dimensional feature vectors. <script type="math/tex">\phi</script> for each history is provided in <code class="highlighter-rouge">data/train.feats.gz</code></dd>
+  <dt><script type="math/tex">\Phi</script></dt>
+  <dd>global feature vector defined as above by summing over all local feature vectors <script type="math/tex">\phi</script></dd>
+  <dt><strong>w</strong></dt>
+  <dd><script type="math/tex">d</script> dimensional weight vector. one weight for each feature in the feature vector.</dd>
+</dl>
+
+<p><strong>## Initialization ##</strong></p>
+
+<ul class="list-unstyled">
+  <li>Set weight vector <strong>w</strong> to zeroes.</li>
+</ul>
+
+<p><strong>## Main Loop ##</strong></p>
+
+<ul class="list-unstyled">
+  <li>for t = 1, …, T, for j = 1, …, n
+    <ul>
+      <li>Use the Viterbi algorithm to find the output of the model on the <script type="math/tex">i</script>-th training sentence (the function <code class="highlighter-rouge">perc_test</code> in <code class="highlighter-rouge">perc.py</code> implements the Viterbi algorithm) where <script type="math/tex">{\cal T}^{n_j}</script> is the set of all tag sequences of length <script type="math/tex">n_j</script>.</li>
+    </ul>
+    <p>$$ z_{[1:n]} = \arg\max_{u_{[1:n]} \in {\cal T}^{n_j}} \sum_s w_s \Phi_s(w_{[1:n_j]}^{(j)}, u_{[1:n_j]}) $$</p>
+    <ul>
+      <li>If <script type="math/tex">z_{[1:n]} \neq t_{[1:n]}^{(j)}</script> then update the weight vector:
+        <p>$$w_s = w_s + \Phi_s(w_{[1:n_j]}^{(j)}, t_{[1:n_j]}^{(j)}) - \Phi_s(w_{[1:n_j]}^{(j)}, z_{[1:n_j]})$$</p>
+      </li>
+    </ul>
+  </li>
+  <li>return <strong>w</strong></li>
+</ul>
+<hr />
+
+<p>The weight vector update step rewards the features that occur in
+the reference and penalizes any features that appear in the
+<script type="math/tex">\arg\max</script> that do not appear in the reference. Features that
+lead to incorrect output labels, e.g. <script type="math/tex">w_i</script> is the word <code class="highlighter-rouge">the</code> and
+the output label is <code class="highlighter-rouge">B-VP</code>, will tend to get negative weights, and
+features that are observed in the reference will tend to get positive
+weights.</p>
+
+<p>An <a href="https://gist.github.com/anoopsarkar/0b8d0d6ab2f9e257afb8">example feature vector update</a>
+might be helpful to check how the update happens for each sentence in the training data set.</p>
+
+<p>In the above pseudo-code, when <script type="math/tex">z_{[1:n]} \neq t_{[1:n]}^{(j)}</script>
+this is counted as a mistake made by the perceptron. The theory
+behind the algorithm states that the number of mistakes is 
+bounded by a factor called the <em>margin</em> of the dataset. In practice,
+you should check that the number of mistakes in for an epoch t is smaller
+than epoch t-1. We stop before the number of mistakes is zero
+because there might be examples in the training data that can
+never be correctly predicted.</p>
+
+<p>The <script type="math/tex">\arg\max</script> computation above explores all <script type="math/tex">S^{n_j}</script> output
+label sequences in the set <script type="math/tex">{\cal T}^{n_j}</script>, where <script type="math/tex">S</script> is the
+total number of output labels (provided in <code class="highlighter-rouge">data/tagset.txt</code>).  If
+this <script type="math/tex">\arg\max</script> search is done naively it will take exponential
+time. However, the Viterbi algorithm, which is given to you as the
+function <code class="highlighter-rouge">perc_test</code> in <code class="highlighter-rouge">perc.py</code>, is a dynamic programming algorithm
+that computes the <script type="math/tex">\arg\max</script> in <script type="math/tex">{\cal O}(S^2 n_j)</script> time (for
+bigram features on output labels).</p>
+
+<p>The algorithm and the theory behind it is described in much greater
+detail in the following paper:</p>
+
+<blockquote>
+  <p>Michael Collins. <a href="http://www.aclweb.org/anthology/W/W02/W02-1001.pdf">Discriminative Training Methods for Hidden
+Markov Models: Theory and Experiments with Perceptron
+Algorithms</a>. EMNLP
+2002.</p>
+</blockquote>
+
+<p>You will find that training using the perceptron can be very
+compute intensive and time consuming. To help with speedier
+development, you can reduce the value of <code class="highlighter-rouge">T</code> to 1. Also,
+the following files contain the sentences and features
+for a small training data set:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>data/train.dev
+data/train.feats.dev
+</code></pre>
+</div>
+
+<p>Also, when testing your model you can run on a smaller
+subset of the input test data:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>data/small.test
+data/small.test.feats
+</code></pre>
+</div>
+
+<hr />
+
+<h3 id="your-task">Your Task</h3>
+
+<p>Developing a chunker using the Perceptron algorithm (described in
+the above pseudo-code) is good enough to get an F-measure that is
+close to the performance of the baseline system on the leaderboard.
+But getting closer to the best known accuracy on this task, which
+is hovering around 94.12 F-measure is a more interesting
+challenge. To get full credit you <strong>must</strong> experiment with at least
+one additional model of your choice and document your work. Here
+are some ideas:</p>
+
+<ul>
+  <li>Use the averaged perceptron algorithm.
+    <ul>
+      <li>First read <a href="http://www.aclweb.org/anthology/W/W02/W02-1001.pdf">Collins 2002</a>.</li>
+      <li>For more detailed pseudo-code see <a href="http://www.cs.sfu.ca/~anoop/papers/pdf/syntax-parsing-survey-2011.pdf">Sarkar 2011</a> (page 36 and the more efficient version in page 38).</li>
+    </ul>
+  </li>
+  <li>Use <a href="http://www.cs.sfu.ca/~anoop/papers/pdf/ai05.pdf">different data representations</a> for chunking and combine them with voting or other means.</li>
+  <li>Use <a href="http://jmlr.csail.mit.edu/papers/v7/crammer06a.html">a Margin Infused perceptron algorithm</a>.</li>
+  <li>Use a <a href="http://aclweb.org/anthology/N/N03/N03-1028.pdf">Conditional Random Field</a> aka CRF for batch learning. The baseline above is an example of <a href="http://en.wikipedia.org/wiki/Online_machine_learning">online learning</a>.</li>
+  <li>Use <a href="http://leon.bottou.org/projects/sgd">stochastic gradient descent</a> which uses online learning to train the CRF.</li>
+  <li>Use <a href="http://www.aclweb.org/anthology/W05-0611">trigram features over output labels</a> instead of bigram features.</li>
+  <li>Use <a href="http://aclweb.org/anthology/N/N12/N12-1015.pdf">clusters over output label sequences and word-by-word independent classifiers</a> instead of Viterbi search and a structured perceptron.</li>
+  <li>Use <a href="http://aclweb.org/anthology/N/N12/N12-1015.pdf">violation fixing and beam search</a> instead of argmax search.</li>
+  <li>Use <a href="http://aclweb.org/anthology/P/P07/P07-1096.pdf">bidirectional search</a> which jumps around in the input sentence instead of a strict left-to-right search.</li>
+</ul>
+
+<p>But the sky’s the limit! You are welcome to design your own model, as long 
+as you follow the ground rules:</p>
+
+<h2 id="ground-rules">Ground Rules</h2>
+
+<ul>
+  <li>Each group should submit using one person as the designated uploader.</li>
+  <li>You must turn in three things:
+    <ol>
+      <li>Chunking output of the test dataset which is in <code class="highlighter-rouge">chunker/data/input.txt.gz</code> (this is the default input to <code class="highlighter-rouge">perc.py</code>) uploaded to the <a href="http://sfu-nlp-class.appspot.com">leaderboard submission site</a> according to <a href="hw0.html">the Homework 0 instructions</a>. You can upload new output as often as you like, up until the assignment deadline. The Submit button for showing the test set scores will be unavailable until after the homework deadline and grace days have passed.  The output will be evaluated using a secret metric, but the <code class="highlighter-rouge">score-chunks.py</code> program will give you a good idea of how well you’re doing.</li>
+      <li>Your code. Each group should assign one member to upload the source code to <a href="https://courses.cs.sfu.ca">Coursys</a> as the submission for Homework 2. The code should be self-contained, self-documenting, and easy to use. It should use the same input and output assumptions of <code class="highlighter-rouge">default.py</code>.</li>
+      <li>A clear, mathematical description of your algorithm and its motivation written in scientific style. This needn’t be long, but it should be clear enough that one of your fellow students could re-implement it exactly. Include the file for this writeup as part of the tarball or zip file you will upload to <a href="https://courses.cs.sfu.ca">Coursys</a>. Include also how your group divided up the work load and each group member’s contribution to the homework solution.</li>
+    </ol>
+  </li>
+  <li>You cannot use data or code resources outside of what is provided to you. You can use NLTK but not the NLTK chunker implementation.</li>
+  <li>For the written description of your algorithm, you can use plain ASCII but for math equations it is better to use either <a href="http://www.latex-project.org/">latex</a> or <a href="https://github.com/gettalong/kramdown">kramdown</a>.  Do <strong>not</strong> use any proprietary or binary file formats such as Microsoft Word.</li>
+</ul>
+
+<p>If you have any questions or you’re confused about anything, just ask.</p>
+
+<h2 id="appendix">Appendix</h2>
+
+<h3 id="part-of-speech-tags">Part-of-speech tags</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Part-of-speech tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CC</td>
+      <td>Coordinating conjunction</td>
+    </tr>
+    <tr>
+      <td>CD</td>
+      <td>Cardinal number</td>
+    </tr>
+    <tr>
+      <td>DT</td>
+      <td>Determiner</td>
+    </tr>
+    <tr>
+      <td>EX</td>
+      <td>Existential there</td>
+    </tr>
+    <tr>
+      <td>FW</td>
+      <td>Foreign word</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>Preposition or subordinating conjunction</td>
+    </tr>
+    <tr>
+      <td>JJ</td>
+      <td>Adjective</td>
+    </tr>
+    <tr>
+      <td>JJR</td>
+      <td>Adjective, comparative</td>
+    </tr>
+    <tr>
+      <td>JJS</td>
+      <td>Adjective, superlative</td>
+    </tr>
+    <tr>
+      <td>LS</td>
+      <td>List item marker</td>
+    </tr>
+    <tr>
+      <td>MD</td>
+      <td>Modal</td>
+    </tr>
+    <tr>
+      <td>NN</td>
+      <td>Noun, singular or mass</td>
+    </tr>
+    <tr>
+      <td>NNS</td>
+      <td>Noun, plural</td>
+    </tr>
+    <tr>
+      <td>NNP</td>
+      <td>Proper noun, singular</td>
+    </tr>
+    <tr>
+      <td>NNPS</td>
+      <td>Proper noun, plural</td>
+    </tr>
+    <tr>
+      <td>PDT</td>
+      <td>Predeterminer</td>
+    </tr>
+    <tr>
+      <td>POS</td>
+      <td>Possessive ending</td>
+    </tr>
+    <tr>
+      <td>PRP</td>
+      <td>Personal pronoun</td>
+    </tr>
+    <tr>
+      <td>PRP$</td>
+      <td>Possessive pronoun</td>
+    </tr>
+    <tr>
+      <td>RB</td>
+      <td>Adverb</td>
+    </tr>
+    <tr>
+      <td>RBR</td>
+      <td>Adverb, comparative</td>
+    </tr>
+    <tr>
+      <td>RBS</td>
+      <td>Adverb, superlative</td>
+    </tr>
+    <tr>
+      <td>RP</td>
+      <td>Particle</td>
+    </tr>
+    <tr>
+      <td>SYM</td>
+      <td>Symbol</td>
+    </tr>
+    <tr>
+      <td>TO</td>
+      <td>to</td>
+    </tr>
+    <tr>
+      <td>UH</td>
+      <td>Interjection</td>
+    </tr>
+    <tr>
+      <td>VB</td>
+      <td>Verb, base form</td>
+    </tr>
+    <tr>
+      <td>VBD</td>
+      <td>Verb, past tense</td>
+    </tr>
+    <tr>
+      <td>VBG</td>
+      <td>Verb, gerund or present participle</td>
+    </tr>
+    <tr>
+      <td>VBN</td>
+      <td>Verb, past participle</td>
+    </tr>
+    <tr>
+      <td>VBP</td>
+      <td>Verb, non-3rd person singular present</td>
+    </tr>
+    <tr>
+      <td>VBZ</td>
+      <td>Verb, 3rd person singular present</td>
+    </tr>
+    <tr>
+      <td>WDT</td>
+      <td>Wh-determiner</td>
+    </tr>
+    <tr>
+      <td>WP</td>
+      <td>Wh-pronoun</td>
+    </tr>
+    <tr>
+      <td>WP$</td>
+      <td>Possessive wh-pronoun</td>
+    </tr>
+    <tr>
+      <td>WRB</td>
+      <td>Wh-adverb</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="chunk-tags">Chunk tags</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Chunk tag</th>
+      <th>Description</th>
+      <th>Examples</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NP</td>
+      <td>noun phrase</td>
+      <td><code class="highlighter-rouge">[NP Eastern Airlines]</code></td>
+      <td>The most common phrase in the data set.</td>
+    </tr>
+    <tr>
+      <td>VP</td>
+      <td>verb phrase</td>
+      <td><code class="highlighter-rouge">[VP have to be]</code> ; <code class="highlighter-rouge">[VP have got]</code> <code class="highlighter-rouge">[VP is]</code> ; <code class="highlighter-rouge">[VP could very well show]</code></td>
+      <td>Does <em>not</em> include the object of the verb</td>
+    </tr>
+    <tr>
+      <td>ADVP</td>
+      <td>adverb phrase</td>
+      <td><code class="highlighter-rouge">[NP a year] [ADVP earlier]</code></td>
+      <td>Modifies a verb phrase or noun phrase.</td>
+    </tr>
+    <tr>
+      <td>ADJP</td>
+      <td>adjective phrase</td>
+      <td><code class="highlighter-rouge">[NP 68 years] [ADJP old]</code></td>
+      <td>Modifies a noun phrase.</td>
+    </tr>
+    <tr>
+      <td>PP</td>
+      <td>prepositional phrase</td>
+      <td><code class="highlighter-rouge">[PP in]</code> ; <code class="highlighter-rouge">[PP such as]</code> ; <code class="highlighter-rouge">[PP particularly among]</code></td>
+      <td>Contains only the preposition <em>not</em> the complement NP phrase after the preposition.</td>
+    </tr>
+    <tr>
+      <td>SBAR</td>
+      <td>complementizer phrase</td>
+      <td><code class="highlighter-rouge">[SBAR that]</code> ; <code class="highlighter-rouge">[SBAR even though]</code></td>
+      <td>Marks the start of a sentence</td>
+    </tr>
+    <tr>
+      <td>CONJP</td>
+      <td>conjunction phrase</td>
+      <td><code class="highlighter-rouge">[CONJP and]</code> ; <code class="highlighter-rouge">[CONJP as well as]</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>PRT</td>
+      <td>verb particle phrase</td>
+      <td><code class="highlighter-rouge">[PRT up]</code> ; <code class="highlighter-rouge">[PRT on and off]</code></td>
+      <td>Verb particles in English: <code class="highlighter-rouge">call up</code>; <code class="highlighter-rouge">up</code> is the particle.</td>
+    </tr>
+    <tr>
+      <td>INTJ</td>
+      <td>interjection phrase</td>
+      <td><code class="highlighter-rouge">[INTJ alas]</code> ; <code class="highlighter-rouge">[INTJ good grief !]</code></td>
+      <td>Very rare</td>
+    </tr>
+    <tr>
+      <td>LST</td>
+      <td>list phrase</td>
+      <td><code class="highlighter-rouge">[LST 1.]</code> ; <code class="highlighter-rouge">[LST first]</code> ; <code class="highlighter-rouge">[LST a]</code></td>
+      <td>Very rare</td>
+    </tr>
+    <tr>
+      <td>UCP</td>
+      <td>unlike coordinated phrase</td>
+      <td><code class="highlighter-rouge">[UCP and]</code></td>
+      <td>Similar to the CONJP phrase but for conjunction of two different phrase types. Extremely rare.</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>outside any phrase</td>
+      <td><code class="highlighter-rouge">[O .]</code> ; <code class="highlighter-rouge">[SBAR that]</code> <code class="highlighter-rouge">[NP there]</code> <code class="highlighter-rouge">[VP were]</code> <code class="highlighter-rouge">[O n't]</code> <code class="highlighter-rouge">[NP any major problems]</code></td>
+      <td>Mostly punctuations, but some corner cases as well.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="feature-schema">Feature Schema</h3>
+
+<p>This section explains the format of data in the <code class="highlighter-rouge">*.feats.gz</code> files.</p>
+
+<p>Consider a fragment of the example sentence from the introduction:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>He      PRP B-NP
+reckons VBZ B-VP
+the     DT  B-NP
+current JJ  I-NP
+account NN  I-NP
+</code></pre>
+</div>
+
+<p>Let us consider generating features for the 3rd word in this sentence, <code class="highlighter-rouge">the DT B-NP</code>.
+This word is assigned an index of <code class="highlighter-rouge">0</code>. The word before, <code class="highlighter-rouge">reckons</code> is assigned a relative 
+row position of <code class="highlighter-rouge">-1</code> and <code class="highlighter-rouge">He</code> has a row position <code class="highlighter-rouge">-2</code>. Similarly, the next word
+<code class="highlighter-rouge">current</code> is row position <code class="highlighter-rouge">1</code>, and so on. We can also look at the different values
+in each row position. For example, for row position <code class="highlighter-rouge">-1</code> the column position <code class="highlighter-rouge">0</code>
+represents the word <code class="highlighter-rouge">reckons</code> and column position <code class="highlighter-rouge">1</code> is the part-of-speech tag, <code class="highlighter-rouge">VBZ</code>.</p>
+
+<p>We can now define a feature schema that generates features for each row position
+using the notation <code class="highlighter-rouge">%x[i,j]</code> where <code class="highlighter-rouge">%x</code> represents the input, <code class="highlighter-rouge">i</code> is the relative
+row position, and <code class="highlighter-rouge">j</code> is the value at the column for that row position.</p>
+
+<p>Similarly, <code class="highlighter-rouge">%y[i]</code> represents a feature schema for the output labels, where
+<code class="highlighter-rouge">i</code> is the relative row position.</p>
+
+<p>We can create n-gram feature schema by combining multiple row positions separated
+by a slash <code class="highlighter-rouge">/</code>. For instance, <code class="highlighter-rouge">%x[i,j]/%x[i,j]</code> is a bigram feature schema.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Feature name</th>
+      <th>Schema</th>
+      <th>Example for <code class="highlighter-rouge">the</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>U00</td>
+      <td>%x[-2,0]</td>
+      <td><code class="highlighter-rouge">FEAT U00:He</code></td>
+    </tr>
+    <tr>
+      <td>U01</td>
+      <td>%x[-1,0]</td>
+      <td><code class="highlighter-rouge">FEAT U01:reckons</code></td>
+    </tr>
+    <tr>
+      <td>U02</td>
+      <td>%x[0,0]</td>
+      <td><code class="highlighter-rouge">FEAT U02:the</code></td>
+    </tr>
+    <tr>
+      <td>U03</td>
+      <td>%x[1,0]</td>
+      <td><code class="highlighter-rouge">FEAT U03:current</code></td>
+    </tr>
+    <tr>
+      <td>U04</td>
+      <td>%x[2,0]</td>
+      <td><code class="highlighter-rouge">FEAT U04:account</code></td>
+    </tr>
+    <tr>
+      <td>U05</td>
+      <td>%x[-1,0]/%x[0,0]</td>
+      <td><code class="highlighter-rouge">FEAT U05:reckons/the</code></td>
+    </tr>
+    <tr>
+      <td>U06</td>
+      <td>%x[0,0]/%x[1,0]</td>
+      <td><code class="highlighter-rouge">FEAT U06:the/current</code></td>
+    </tr>
+    <tr>
+      <td>U10</td>
+      <td>%x[-2,1]</td>
+      <td><code class="highlighter-rouge">FEAT U10:PRP</code></td>
+    </tr>
+    <tr>
+      <td>U11</td>
+      <td>%x[-1,1]</td>
+      <td><code class="highlighter-rouge">FEAT U11:VBZ</code></td>
+    </tr>
+    <tr>
+      <td>U12</td>
+      <td>%x[0,1]q</td>
+      <td><code class="highlighter-rouge">FEAT U12:DTq</code></td>
+    </tr>
+    <tr>
+      <td>U13</td>
+      <td>%x[1,1]</td>
+      <td><code class="highlighter-rouge">FEAT U13:JJ</code></td>
+    </tr>
+    <tr>
+      <td>U14</td>
+      <td>%x[2,1]</td>
+      <td><code class="highlighter-rouge">FEAT U14:NN</code></td>
+    </tr>
+    <tr>
+      <td>U15</td>
+      <td>%x[-2,1]/%x[-1,1]</td>
+      <td><code class="highlighter-rouge">FEAT U15:PRP/VBZ</code></td>
+    </tr>
+    <tr>
+      <td>U16</td>
+      <td>%x[-1,1]/%x[0,1]</td>
+      <td><code class="highlighter-rouge">FEAT U16:VBZ/DT</code></td>
+    </tr>
+    <tr>
+      <td>U17</td>
+      <td>%x[0,1]/%x[1,1]</td>
+      <td><code class="highlighter-rouge">FEAT U17:DT/JJ</code></td>
+    </tr>
+    <tr>
+      <td>U18</td>
+      <td>%x[1,1]/%x[2,1]</td>
+      <td><code class="highlighter-rouge">FEAT U18:JJ/NN</code></td>
+    </tr>
+    <tr>
+      <td>U20</td>
+      <td>%x[-2,1]/%x[-1,1]/%x[0,1]</td>
+      <td><code class="highlighter-rouge">FEAT U20:PRP/VBZ/DT</code></td>
+    </tr>
+    <tr>
+      <td>U21</td>
+      <td>%x[-1,1]/%x[0,1]/%x[1,1]</td>
+      <td><code class="highlighter-rouge">FEAT U21:VBZ/DT/JJ</code></td>
+    </tr>
+    <tr>
+      <td>U22</td>
+      <td>%x[0,1]/%x[1,1]/%x[2,1]</td>
+      <td><code class="highlighter-rouge">FEAT U22:DT/JJ/NN</code></td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>%y[-1]/%y[0]</td>
+      <td><code class="highlighter-rouge">FEAT B</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To construct a feature function we have to combine the feature,
+e.g. <code class="highlighter-rouge">U02:the</code> with the output label. For example, for the above
+fragment let us add a new column for the <script type="math/tex">\arg\max</script> output.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>He      PRP B-NP B-PP
+reckons VBZ B-VP B-NP
+the     DT  B-NP I-NP
+current JJ  I-NP B-NP
+account NN  I-NP I-NP
+</code></pre>
+</div>
+
+<p>The feature function for <code class="highlighter-rouge">U02:the</code> for the output label <code class="highlighter-rouge">I-NP</code> is
+<code class="highlighter-rouge">(U02:the, I-NP)</code> and for the true label <code class="highlighter-rouge">B-NP</code> the feature function
+is <code class="highlighter-rouge">(U02:the, B-NP)</code>. The perceptron will add one to the weight
+vector for the feature function <code class="highlighter-rouge">(U02:the, B-NP)</code> and delete one
+for the feature function <code class="highlighter-rouge">(U02:the, I-NP)</code>. In cases where the output
+label matches the truth the update to the weight is zero.</p>
+
+<p>The last feature <code class="highlighter-rouge">B</code> which stands for the bigram feature over output
+labels is not spelled out in the <code class="highlighter-rouge">.feats.gz</code> files because this
+feature has all pairs of output labels and the computation of the
+<script type="math/tex">\arg\max</script> is needed to tell us which <code class="highlighter-rouge">B</code> feature obtained the
+highest score and if it was different from the pair of output labels
+in the reference chunks.</p>
+
+<p>For example, the Viterbi algorithm in <code class="highlighter-rouge">perc.py</code> in the above example
+produced the output label <code class="highlighter-rouge">I-NP</code> for the word <code class="highlighter-rouge">the</code> and the output
+label <code class="highlighter-rouge">B-NP</code> for the previous word <code class="highlighter-rouge">reckons</code>. Thus, the decoder has
+produced a bigram <code class="highlighter-rouge">B</code> feature function: <code class="highlighter-rouge">(B-NP, I-NP)</code> which is a
+feature that the trainer should penalize because it is incorrect.
+The trainer should also reward the correct bigram feature function
+<code class="highlighter-rouge">(B-VP, B-NP)</code>.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><em>Caveat</em>: If you have a linguistic background, you might find the verb phrases <code class="highlighter-rouge">VP</code> and prepositional phrases <code class="highlighter-rouge">PP</code> are different from what you might be used to. In this task, the <code class="highlighter-rouge">VP</code> is a verb and verb modifiers like auxiliaries (<code class="highlighter-rouge">were</code>) or modals (<code class="highlighter-rouge">might</code>), and the <code class="highlighter-rouge">PP</code> simply contains the preposition. This difference is because of the fact that the chunks are non-recursive (cannot contain other phrases) – we need trees for full syntax. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="http://www.cnts.ua.ac.be/conll2000/pdf/12732tjo.pdf">Introduction to the CoNLL-2000 Shared Task: Chunking</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        </div>
+      </div>
+
+      <footer class="text-center text-muted">
+        <hr/>
+        Last updated September 06, 2016.<br/>
+        Forked from the JHU MT class code on <a href="https://github.com/mt-class/jhu">github <i class="fa fa-github-alt"></i></a> by <a href="https://github.com/mjpost">Matt Post</a> and <a href="https://github.com/alopez">Adam Lopez</a>.<br/>
+        <br/><br/>
+      </footer>
+    </div>
+
+    <!-- Page content of course! -->
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#homework").addClass("active");
+      });
+    </script>
+  </body>
+</html>
