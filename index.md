@@ -1,9 +1,9 @@
 ---
 layout: default
-img: C-3PO
-img_link: "http://en.wikipedia.org/wiki/Languages_in_Star_Wars"
-caption: "In Star Wars, C-3PO is fluent in over six million forms of communication."
 title: Course Information
+img: positronic
+img_link: "https://en.wikipedia.org/wiki/Positronic_brain"
+caption: "A positronic brain is a fictional technological device, originally conceived by science fiction writer Isaac Asimov. When Asimov wrote his first robot stories in 1939 and 1940, the positron was a newly discovered particle, and so the buzz word positronic added a contemporary gloss of popular science to the concept."
 active_tab: main_page 
 ---
 

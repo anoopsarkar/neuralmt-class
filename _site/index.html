@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SFU NLP class: Course Information</title>
+    <title>SFU Neural MT class: Course Information</title>
 
     <!-- CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,25 +40,22 @@
             <span class="icon-bar"></span>
           </button>
           <ul class="nav navbar-nav">
-            <li id="main_page"><a href="index.html" class="navbar-brand">Natural Language Processing</a></li>
+            <li id="main_page"><a href="index.html" class="navbar-brand">Neural MT</a></li>
           </ul>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
             <li id="syllabus"><a href="syllabus.html">Syllabus</a></li>
             <li id="homework">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Homework <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project <span class="caret"></span></a>
               <ol class="dropdown-menu">
-                <li><a href="hw0.html">0. Setup</a></li>
-                <li><a href="hw1.html">1. Word Segmentation</a></li>
-                <li><a href="hw2.html">2. Phrasal Chunking</a></li>
-                <li><a href="hw3.html">3. Word Alignment</a></li>
-                <li><a href="hw4.html">4. Translation Decoding</a></li>
-                <li><a href="hw5.html">5. Translation Reranking</a></li>
+                <li><a href="project0.html">1. Neural LM</a></li>
+                <li><a href="project1.html">2. Perceptron MT</a></li>
+                <li><a href="project2.html">3. Encoder-Decoder</a></li>
+                <li><a href="project.html">4. Final Project</a></li>
               </ol>
             </li>
-            <li id="leaderboard"><a href="leaderboard.html">Leaderboard</a></li>
-            <li id="project"><a href="project.html">Project</a></li>
+            <li id="bib"><a href="bibliography.html">Bibliography</a></li>
             <li id="faq"><a href="faq.html">FAQ</a></li>
           </ul>
         </nav>
@@ -69,53 +66,40 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-2 hidden-sm hidden-xs">
-          <a href="http://en.wikipedia.org/wiki/Languages_in_Star_Wars"> 
-          <img src="assets/img/C-3PO.jpg" class="img-responsive img-rounded" alt=""/>
+          <a href="https://en.wikipedia.org/wiki/Positronic_brain"> 
+          <img src="assets/img/positronic.jpg" class="img-responsive img-rounded" alt=""/>
           </a> 
-          <span class="text-muted"><i>In Star Wars, C-3PO is fluent in over six million forms of communication.</i></span>
+          <span class="text-muted"><i>A positronic brain is a fictional technological device, originally conceived by science fiction writer Isaac Asimov. When Asimov wrote his first robot stories in 1939 and 1940, the positron was a newly discovered particle, and so the buzz word positronic added a contemporary gloss of popular science to the concept.</i></span>
         </div>
         <div class="col-sm-10">
-          <h2 id="natural-language-processing-span-classtext-mutedfall-2016span">Natural Language Processing <span class="text-muted">Fall 2016</span></h2>
+          <h2 id="neural-machine-translation-span-classtext-mutedfall-2016span">Neural Machine Translation <span class="text-muted">Fall 2016</span></h2>
 
-<p>Imagine a world where you can pick up a phone and talk in English,
-while at the other end of the line your words are <a href="https://www.youtube.com/watch?v=Nu-nlQqFCKg">spoken in
-Chinese</a>.  Imagine a
-<a href="http://mitpress.mit.edu/books/embodied-conversational-agents">computer animated representation of
-yourself</a>
-speaking fluently what you have written in an email. Imagine
-automatically uncovering protein/drug interactions in <a href="http://fable.chop.edu/">petabytes
-of medical abstracts</a>. Imagine feeding a
-computer an ancient script that no living person can read, then
-listening as <a href="http://aclanthology.info/papers/a-computational-approach-to-deciphering-unknown-scripts">the computer reads aloud in this dead
-language</a>.
-Imagine a computer that can <a href="https://www.youtube.com/watch?v=lI-M7O_bRNg">do better than humans at answering
-questions</a>.</p>
-
-<p>Natural Language Processing is the automatic analysis of human
-languages such as English, Korean, and thousands of others analyzed
-by computer algorithms. Unlike artificially created programming
-languages where the structure and meaning of programs is easy to
-encode, human languages provide an interesting challenge, both in
-terms of its analysis and the learning of language from observations.</p>
+<p>This is a special topics course entitled “Neural Machine Translation”.
+This is an advanced graduate seminar course is about recursive
+neural network models for machine translation (for natural languages
+such as English, Chinese, Tagalog, etc.). You will require some
+background in statistical machine translation and language models.
+This course will not be a tutorial on deep learning in general. The
+main goal of the course will be to work on writing our own end to
+end neural machine translation system. The course will cover recent
+developments in neural machine translation and we hope to discuss
+and solve issues with the long tail (limited vocabulary size in
+neural MT) and in the proper modeling of alignment (aka attention).</p>
 
 <dl>
   <dt>Instructor</dt>
   <dd><a href="http://www.cs.sfu.ca/~anoop/">Anoop Sarkar</a></dd>
   <dd>Office Hours: Mondays 3pm-4pm TASC1 9427</dd>
-  <dt>Teaching Assistant</dt>
-  <dd>Golnar Sheikhshabbafghi</dd>
-  <dd>Email: <code class="highlighter-rouge">cmpt-413-help@sfu.ca</code></dd>
-  <dd>Office Hours: TBA</dd>
   <dt>Discussion Board</dt>
   <dd><a href="https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/discussion/">on Coursys</a></dd>
   <dt>Time and place</dt>
-  <dd>MWF 1:30-2:20, BLU 10021</dd>
+  <dd>MWF 11:30-12:20, SECB 1011</dd>
   <dt>Calendar</dt>
   <dd><a href="https://courses.cs.sfu.ca/news/75221d0252e1cdacf94dac56b78600e9/anoop">Subscribe</a></dd>
   <dt>Textbook</dt>
   <dd>No required textbook. Online readings provided in Syllabus.</dd>
   <dt>Grading</dt>
-  <dd>Submit homework source code and check your grades on <a href="https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/">Coursys</a></dd>
+  <dd>Submit project source code and check your grades on <a href="https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/">Coursys</a></dd>
 </dl>
 
 <ul>

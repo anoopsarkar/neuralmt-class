@@ -1,8 +1,8 @@
 ---
 layout: default
-img: artsrouni
-img_link: http://www.hutchinsweb.me.uk/IJT-2004.pdf
-caption: "Georges Artsrouni's mechanical brain, a translation device patented in 1933 in France."
+img: encoderdecoder
+img_link: "http://104.131.78.120/"
+caption: "Neural Machine Translation Demo from the LISA Lab at the University of Montreal. Try it out!"
 title: Syllabus
 active_tab: syllabus
 ---
