@@ -40,8 +40,7 @@ Textbook
 Grading
 : Submit project source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/)
 
-* In class presentations: 30%
-* Scribing: 20%
+* In class presentations: 40%
 * Project stages: Project 1, 2 and 3; 10% each.
-* Final project: 20%.
+* Final project: 30%.
 
