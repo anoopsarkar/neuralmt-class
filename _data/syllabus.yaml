@@ -14,11 +14,14 @@
     - title: "Deep Learning"
       author: "Ian Goodfellow, Yoshua Bengio and Aaron Courville"
       url: "http://www.deeplearningbook.org/"
+    - title: "Neural MT implementations"
+      url: "https://github.com/jonsafari/nmt-list"
 - title: "Introduction to Neural MT"
   tag: tutorial
   current: false
   notes:
     - title: "Neural Machine Translation"
+      author: "Thang Luong, Kyunghyun Cho and Chris Manning"
       citation: "Tutorial at ACL 2016"
       url: "https://sites.google.com/site/acl16nmt/"
       download: "http://nlp.stanford.edu/projects/nmt/Luong-Cho-Manning-NMT-ACL2016-v4.pdf"
