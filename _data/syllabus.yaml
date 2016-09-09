@@ -7,6 +7,13 @@
     - author: Philipp Koehn
       title: "Decoding for Statistical MT"
       url: "http://anoopsarkar.github.io/nlp-class/assets/slides/06-decoding.pdf"
+  links:
+    - title: "A Primer on Neural Networks for NLP"
+      author: Yoav Goldberg
+      url: "http://u.cs.biu.ac.il/~yogo/nnlp.pdf" 
+    - title: "Deep Learning"
+      author: "Ian Goodfellow, Yoshua Bengio and Aaron Courville"
+      url: "http://www.deeplearningbook.org/"
 - title: "Introduction to Neural MT"
   tag: tutorial
   current: false
