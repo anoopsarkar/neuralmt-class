@@ -3,7 +3,7 @@ layout: default
 title: Course Information
 img: kb2013
 img_link: "http://www.aclweb.org/anthology/D13-1176"
-caption: "Kalchbrenner and Blunsom (EMNLP 2013) introduced the notion of encoding the input into a continuous representation and then generating the output translation from it."
+caption: "Kalchbrenner and Blunsom (EMNLP 2013) encoded the source language input into a continuous representation and then generated the output translation from it."
 active_tab: main_page 
 ---
 

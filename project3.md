@@ -7,7 +7,7 @@ title: "Project 3: Encoder-Decoder"
 active_tab: project
 ---
 
-# Encoder-Decoder for MT
+# Attention Model for Neural MT
 
 TBA
 

@@ -7,7 +7,7 @@ title: "Project 2: Perceptron MT"
 active_tab: project
 ---
 
-# End-to-end Discriminative MT
+# Encoder-Decoder for MT
 
 TBA
 
