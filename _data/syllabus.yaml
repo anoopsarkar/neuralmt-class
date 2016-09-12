@@ -1,12 +1,9 @@
 - title: "Course Introduction"
   tag: intro
-  current: true
+  current: false
   notes:
     - title: "Statistical Machine Translation"
       url: "assets/slides/smt-intro.pdf"
-    - author: Philipp Koehn
-      title: "Decoding for Statistical MT"
-      url: "http://anoopsarkar.github.io/nlp-class/assets/slides/06-decoding.pdf"
   links:
     - title: "A Primer on Neural Networks for NLP"
       author: Yoav Goldberg
@@ -16,12 +13,28 @@
       url: "http://www.deeplearningbook.org/"
     - title: "Neural MT implementations"
       url: "https://github.com/jonsafari/nmt-list"
+    - author: Philipp Koehn
+      title: "Decoding for Statistical MT"
+      url: "http://anoopsarkar.github.io/nlp-class/assets/slides/06-decoding.pdf"
 - title: "Introduction to Neural MT"
   tag: tutorial
-  current: false
+  current: true
   notes:
     - title: "Neural Machine Translation"
       author: "Thang Luong, Kyunghyun Cho and Chris Manning"
       citation: "Tutorial at ACL 2016"
       url: "https://sites.google.com/site/acl16nmt/"
-      download: "http://nlp.stanford.edu/projects/nmt/Luong-Cho-Manning-NMT-ACL2016-v4.pdf"
+      download: "assets/cached/Luong-Cho-Manning-NMT-ACL2016-v4.pdf"
+  links:
+    - title: "Several Studies on Natural Language and Back-propagation"
+      author: "Robert B. Allen"
+      url: "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.716.2719&rep=rep1&type=pdf"
+      download: "assets/cached/10.1.1.716.2719.pdf"
+    - title: "Learning recursive distributed representations for holistic computation"
+      author: Lonnie Chrisman
+      url: "http://repository.cmu.edu/cgi/viewcontent.cgi?article=3061&context=compsci"
+    - title: "Neural Machine Translation: Breaking the Performance Plateau"
+      author: Rico Sennrich
+      url: "http://www.meta-net.eu/events/meta-forum-2016/slides/09_sennrich.pdf"
+      download: "assets/cached/09_sennrich.pdf"
+      optional: true

@@ -44,3 +44,5 @@ Grading
 * Project stages: Project 1, 2 and 3; 10% each.
 * Final project: 30%.
 
+Presentation Sign-up
+: [In Class Presentation Sign-up](http://goo.gl/w8C4aV)
