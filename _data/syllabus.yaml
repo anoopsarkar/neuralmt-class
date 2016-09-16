@@ -5,9 +5,6 @@
     - title: "Statistical Machine Translation"
       url: "assets/slides/smt-intro.pdf"
   links:
-    - title: "A Primer on Neural Networks for NLP"
-      author: Yoav Goldberg
-      url: "http://u.cs.biu.ac.il/~yogo/nnlp.pdf" 
     - title: "Deep Learning"
       author: "Ian Goodfellow, Yoshua Bengio and Aaron Courville"
       url: "http://www.deeplearningbook.org/"
@@ -26,15 +23,39 @@
       url: "https://sites.google.com/site/acl16nmt/"
       download: "assets/cached/Luong-Cho-Manning-NMT-ACL2016-v4.pdf"
   links:
-    - title: "Several Studies on Natural Language and Back-propagation"
-      author: "Robert B. Allen"
-      url: "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.716.2719&rep=rep1&type=pdf"
-      download: "assets/cached/10.1.1.716.2719.pdf"
-    - title: "Learning recursive distributed representations for holistic computation"
-      author: Lonnie Chrisman
-      url: "http://repository.cmu.edu/cgi/viewcontent.cgi?article=3061&context=compsci"
     - title: "Neural Machine Translation: Breaking the Performance Plateau"
       author: Rico Sennrich
       url: "http://www.meta-net.eu/events/meta-forum-2016/slides/09_sennrich.pdf"
       download: "assets/cached/09_sennrich.pdf"
+    - title: "Several Studies on Natural Language and Back-propagation"
+      author: "Robert B. Allen"
+      url: "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.716.2719&rep=rep1&type=pdf"
+      download: "assets/cached/10.1.1.716.2719.pdf"
+      optional: true
+    - title: "Learning recursive distributed representations for holistic computation"
+      author: Lonnie Chrisman
+      url: "http://repository.cmu.edu/cgi/viewcontent.cgi?article=3061&context=compsci"
+      optional: true
+    - title: "A connectionist approach to machine translation"
+      author: "M. A. Castano and F. Casacuberta"
+      citation: "EUROSPEECH. 1997"
+      optional: true
+    - title: "Asynchronous translations with recurrent neural nets"
+      author: "R. Neco and M. Forcada"
+      citation: "International Conference on Neural Networks, vol 4, pages 2535-2540"
+      url: "http://www.cs.brandeis.edu/~gregws/cs113/asynchronous-translations-with-recurrent.pdf"
+      optional: true
+- title: "Neural Network Models and Training"
+  tag: dl4nlp
+  current: false
+  notes:
+    - title: "A Primer on Neural Networks for NLP"
+      author: Yoav Goldberg
+      url: "http://u.cs.biu.ac.il/~yogo/nnlp.pdf" 
+  links:
+    - title: "Natural Language Understanding with Distributed Representation"
+      author: "Kyunghyun Cho"
+      url: "http://arxiv.org/abs/1511.07916"
+    - title: "Deep Learning for MT Winter School"
+      url: "http://dl4mt.computing.dcu.ie/"
       optional: true
