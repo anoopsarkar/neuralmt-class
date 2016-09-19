@@ -15,7 +15,7 @@
       url: "http://anoopsarkar.github.io/nlp-class/assets/slides/06-decoding.pdf"
 - title: "Introduction to Neural MT"
   tag: tutorial
-  current: true
+  current: false
   notes:
     - title: "Neural Machine Translation"
       author: "Thang Luong, Kyunghyun Cho and Chris Manning"
@@ -47,7 +47,7 @@
       optional: true
 - title: "Neural Network Models and Training"
   tag: dl4nlp
-  current: false
+  current: true
   notes:
     - title: "A Primer on Neural Networks for NLP"
       author: Yoav Goldberg
