@@ -9,6 +9,8 @@ active_tab: bib
 
 ## Bibliography
 
+Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/acl16nmt/home/references) by Luong, Cho and Manning.
+
 ### Recurrent Neural Networks
 
 1. [Hochreiter & Schmidhuber, 1997](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf). Long Short-term Memory. 
