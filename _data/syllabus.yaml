@@ -59,3 +59,20 @@
     - title: "Deep Learning for MT Winter School"
       url: "http://dl4mt.computing.dcu.ie/"
       optional: true
+- title: "RNN Language Models"
+  tag: rnnlm
+  current: false
+  notes:
+    - title: "Recurrent neural network based language model"
+      author: "Mikolov et al"
+      citation: "INTERSPEECH 2010"
+      url: "http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf"
+    - title: "Statistical Language Models based on Neural Networks"
+      author: "Tomas Mikolov"
+      citation: "PhD thesis"
+      url: "http://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf"
+  links:
+    - title: "Statistical Language Models based on Neural Networks"
+      author: "Tomas Mikolov"
+      citation: "slides"
+      url: "http://www.fit.vutbr.cz/~imikolov/rnnlm/google.pdf"
