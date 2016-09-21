@@ -71,8 +71,17 @@
       author: "Tomas Mikolov"
       citation: "PhD thesis"
       url: "http://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf"
+    - title: "Extensions of recurrent neural network language model"
+      author: "Mikolov et al"
+      citation: "ICASSP 2011"
+      url: "http://www.fit.vutbr.cz/research/groups/speech/publi/2011/mikolov_icassp2011_presentation_rnnlm-extension.pdf"
   links:
     - title: "Statistical Language Models based on Neural Networks"
       author: "Tomas Mikolov"
       citation: "slides"
       url: "http://www.fit.vutbr.cz/~imikolov/rnnlm/google.pdf"
+    - title: "rnnlm"
+      author: "Tomas Mikolov"
+      citation: "software"
+      url: "http://rnnlm.org/"
+
