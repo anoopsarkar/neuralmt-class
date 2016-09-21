@@ -46,6 +46,9 @@ active_tab: syllabus
                             {% if notes.author %} 
                                 ({{ notes.author }}) 
                             {% endif %}
+                            {%if link.citation %}
+                                {{ link.citation }}.
+                            {% endif %}
                         </li>
                       {% endfor %}
                       </ul>
