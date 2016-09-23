@@ -84,6 +84,10 @@
       author: "Mikolov et al"
       citation: "ICASSP 2011"
       url: "http://www.fit.vutbr.cz/research/groups/speech/publi/2011/mikolov_icassp2011_presentation_rnnlm-extension.pdf"
+    - title: "Decoding with large-scale neural language models improves translation"
+      author: "Vaswani et al"
+      citation: "EMNLP 2013"
+      url: "http://nlg.isi.edu/software/nplm/vaswani-emnlp13.pdf"
   links:
     - title: "Statistical Language Models based on Neural Networks"
       author: "Tomas Mikolov"
@@ -97,4 +101,3 @@
       url: "https://www.youtube.com/watch?v=VINCQghQRuM"
       author: "Alec Radford"
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
-
