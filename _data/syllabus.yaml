@@ -88,6 +88,7 @@
       author: "Vaswani et al"
       citation: "EMNLP 2013"
       url: "http://nlg.isi.edu/software/nplm/vaswani-emnlp13.pdf"
+      download: "http://nlg.isi.edu/software/nplm/"
   links:
     - title: "Statistical Language Models based on Neural Networks"
       author: "Tomas Mikolov"
