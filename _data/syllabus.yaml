@@ -62,6 +62,7 @@
     - title: "Visualizing Optimization Algorithms"
       author: "Alec Radford"
       url: "http://imgur.com/a/Hqolp"
+      optional: true
     - title: "Learning representations by back-propagating errors"
       author: "Rumelhart, Hinton and Williams"
       citation: "Nature, 1986"
