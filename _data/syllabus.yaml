@@ -59,6 +59,9 @@
     - title: "Deep Learning for MT Winter School"
       url: "http://dl4mt.computing.dcu.ie/"
       optional: true
+    - title: "Visualizing Optimization Algorithms"
+      author: "Alec Radford"
+      url: "http://imgur.com/a/Hqolp"
     - title: "Learning representations by back-propagating errors"
       author: "Rumelhart, Hinton and Williams"
       citation: "Nature, 1986"
@@ -89,4 +92,8 @@
       author: "Tomas Mikolov"
       citation: "software"
       url: "http://rnnlm.org/"
+    - title: "RNNs for text analysis"
+      url: "https://www.youtube.com/watch?v=VINCQghQRuM"
+      author: "Alec Radford"
+      video: "https://www.youtube.com/watch?v=VINCQghQRuM"
 
