@@ -59,6 +59,11 @@
     - title: "Deep Learning for MT Winter School"
       url: "http://dl4mt.computing.dcu.ie/"
       optional: true
+    - title: "Learning representations by back-propagating errors"
+      author: "Rumelhart, Hinton and Williams"
+      citation: "Nature, 1986"
+      url: "https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf"
+      optional: true
 - title: "RNN Language Models"
   tag: rnnlm
   current: false
