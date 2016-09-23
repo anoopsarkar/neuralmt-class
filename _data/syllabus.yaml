@@ -70,7 +70,7 @@
   notes:
     - title: "Recurrent neural network based language model"
       author: "Mikolov et al"
-      citation: "INTERSPEECH 2010"
+      citation: "InterSpeech 2010"
       url: "http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf"
     - title: "Statistical Language Models based on Neural Networks"
       author: "Tomas Mikolov"
