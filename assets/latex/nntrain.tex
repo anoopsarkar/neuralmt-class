@@ -1,0 +1,106 @@
+\input{beamerpreamble.tex}
+\begin{document}
+\input{titlepage.tex}
+
+\lecture{Neural Network Training}{}
+
+\section{Log linear models}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+\frametitle{Log linear model}
+\begin{itemize}[<+->]
+\item Let there be $m$ features, $f_k(\textbf{x}, y)$ for $k = 1, \ldots, m$
+\item Define a parameter vector $\textbf{w} \in \mathbb{R}^m$
+\item Each $(\textbf{x}, y)$ pair is mapped to score:
+\[ s(\textbf{x}, y) = \sum_k w_k \cdot f_k(\textbf{x}, y) \]
+\item Using inner product notation:
+\begin{eqnarray*}
+\textbf{w} \cdot \textbf{f}(\textbf{x}, y) & = & \sum_k w_k \cdot f_k(\textbf{x}, y) \\
+s(\textbf{x}, y) & = & \textbf{w} \cdot \textbf{f}(\textbf{x}, y) 
+\end{eqnarray*}
+\item To get a probability from the score: Renormalize! 
+\[ \Pr(y \mid \textbf{x}, \textbf{w}) = \frac{exp\left(s(\textbf{x}, y)\right)}{\sum_{y'} exp\left(s(\textbf{x}, y')\right)} \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Log linear model}
+\begin{itemize}[<+->]
+\item The name `log-linear model' comes from:
+\[ \log \Pr(y \mid \textbf{x}, \textbf{w}) = \underbrace{\textbf{w} \cdot \textbf{f}(\textbf{x}, y)}_{\textrm{linear term}} - \underbrace{\log \sum_{y'} exp\left( \textbf{w} \cdot \textbf{f}(\textbf{x}, y') \right)}_{\textrm{normalization term}} \]
+\item Once the weights are learned, we can perform predictions using these features.
+\item The goal: to find $\textbf{w}$ that maximizes the log likelihood $L(\textbf{w})$ of the labeled training set containing $(\textbf{x}_i, y_i)$ for $i = 1 \ldots n$
+\begin{eqnarray*}
+L(\textbf{w}) &=& \sum_{i} \log \Pr(y_i \mid \textbf{x}_i, \textbf{w}) \\
+&=& \sum_i \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y_i) - \sum_i \log \sum_{y'} exp\left( \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y') \right) 
+\end{eqnarray*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Log linear model}
+\begin{itemize}[<+->]
+\item Maximize:
+\begin{eqnarray*}
+L(\textbf{w}) &=& \sum_i \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y_i) - \sum_i \log \sum_{y'} exp\left( \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y') \right) 
+\end{eqnarray*}
+\item Calculate gradient:
+\begin{eqnarray*}
+\lefteqn{\left. \frac{d L(\textbf{w})}{d \textbf{w}} \right|_{\textbf{w}} } \\
+&=& \sum_i \textbf{f}(\textbf{x}_i, y_i) - \sum_i \frac{1}{\sum_{y''} exp\left(\textbf{w} \cdot \textbf{f}(x_i, y'')\right)} \\
+&& \sum_{y'} \textbf{f}(\textbf{x}_i, y')  \cdot exp\left( \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y') \right) \\
+&=& \sum_i \textbf{f}(\textbf{x}_i, y_i) - \sum_i \sum_{y'} \textbf{f}(\textbf{x}_i, y') \frac{exp\left( \textbf{w} \cdot \textbf{f}(\textbf{x}_i, y') \right)}{\sum_{y''} exp\left(\textbf{w} \cdot \textbf{f}(x_i, y'')\right)} \\
+&=& \underbrace{\sum_i \textbf{f}(\textbf{x}_i, y_i)}_{\textrm{Observed counts}} - \underbrace{\sum_i \sum_{y'} \textbf{f}(\textbf{x}_i, y') \Pr(y' \mid \textbf{x}_i, \textbf{w})}_{\textrm{Expected counts}}
+\end{eqnarray*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Gradient Descent}
+\begin{itemize}[<+->]
+\item Init: $\textbf{w}^{(0)} = \textbf{0}$
+\item $t \leftarrow 0$
+\item Iterate until convergence:
+\begin{itemize}[<+->]
+\item Calculate: $\Delta = \left. \frac{d L(\textbf{w})}{d \textbf{w}}  \right|_{\textbf{w} = \textbf{w}^{(t)}}$
+\item Find $\beta^\ast = \arg\max_\beta L(\textbf{w}^{(t)} + \beta \Delta)$
+\item Set $\textbf{w}^{(t+1)} \leftarrow \textbf{w}^{(t)} + \beta^\ast \Delta$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Binary classification with a single hidden unit}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+\frametitle{Single hidden unit}
+\begin{itemize}[<+->]
+\item Let $x \in \mathbb{R}$ be the input and output $y \in \{ 0, 1 \}$. We represent each input using a feature function $\phi$:
+\[ \phi(x) = \sigma(ux + c) \]
+\item We write $f(x)$ to provide us with the output class $y$ using $p(y \mid x)$ defined as:
+\[ \mu = f(x) = \sigma(w \phi(x) + b) \]
+\item This works if we define $\sigma$ to be the sigmoid function:
+\[ \sigma(x) = \frac{1}{1 + exp(-x)} \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Single hidden unit}
+\begin{itemize}[<+->]
+\item We write $f(x)$ to provide us with the output class $y$ using $p(y \mid x)$ defined as:
+\[ \mu = f(x) = \sigma(w \phi(x) + b) \]
+\item Divergence between true distribution $p(y|x)$ and predicted distribution $\hat{p}(y|x)$:
+\begin{eqnarray*}
+\textrm{KL}(p \mid\mid \hat{p}) &=& \sum_y p(y|x) \log \frac{p(y|x)}{\hat{p}(y|x)} \\
+&=& \sum_y \underbrace{p(y|x) \log p(y|x)}_{\textrm{ignore this}}  - p(y|x) \log \hat{p}(y|x) 
+\end{eqnarray*}
+\item For example $x$ compute the divergence for $x$ as $C_x$:
+\[ C_x = - \log \hat{p}(y|x) = -y \log \mu - (1 - y) \log( 1 - \mu) \]
+\item Sum of the $C_x$ for all $x$ in training is the overall divergence we wish to minimize.
+\end{itemize}
+\end{frame}
+
+
+\input{acknowledgements.tex}
+\end{document}
