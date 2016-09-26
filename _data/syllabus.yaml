@@ -47,7 +47,7 @@
       optional: true
 - title: "Neural Network Models and Training"
   tag: dl4nlp
-  current: true
+  current: false
   notes:
     - title: "A Primer on Neural Networks for NLP"
       author: Yoav Goldberg
@@ -70,7 +70,7 @@
       optional: true
 - title: "RNN Language Models"
   tag: rnnlm
-  current: false
+  current: true
   notes:
     - title: "Recurrent neural network based language model"
       author: "Mikolov et al"
@@ -106,3 +106,40 @@
       url: "https://www.youtube.com/watch?v=VINCQghQRuM"
       author: "Alec Radford"
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
+- title: "Sequence to Sequence RNNs"
+  tag: seq2seq
+  current: false
+  notes:
+    - author: "Sutskever et al."
+      title: "Sequence to Sequence Learning with Neural Networks"
+      citation: "NIPS 2014"
+      url: "http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf"
+    - author: "Cho et al"
+      title: "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation"
+      url: "https://arxiv.org/abs/1406.1078"
+      citation: "EMNLP 2014"
+  links:
+    - author: "Vinyals et al."
+      title: "Grammar as a foreign language"
+      url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
+      citation: "NIPS 2015"
+    - author: "Gu et al"
+      title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
+      url: "http://arxiv.org/pdf/1603.06393.pdf"
+      citation: "ACL 2016"
+- title: "Attention!"
+  tag: attn
+  notes:
+    - author: "Bahdanau et al."
+      title: "Neural Translation by Jointly Learning to Align and Translate"
+      citation: "ICLR 2015"
+      url: "http://arxiv.org/pdf/1409.0473.pdf"
+    - author: "Firat, Cho and Bengio"
+      title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
+      url: "http://arxiv.org/pdf/1601.01073.pdf"
+      citation: "NAACL 2016"
+  links:
+    - author: "Cohn et al"
+      title: "Incorporating Structural Alignment Biases into an Attentional Neural Translation Model"
+      url: "http://arxiv.org/pdf/1601.01085.pdf"
+      citation: "NAACL 2016"
