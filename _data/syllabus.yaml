@@ -134,12 +134,25 @@
       title: "Neural Translation by Jointly Learning to Align and Translate"
       citation: "ICLR 2015"
       url: "http://arxiv.org/pdf/1409.0473.pdf"
-    - author: "Firat, Cho and Bengio"
-      title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
-      url: "http://arxiv.org/pdf/1601.01073.pdf"
-      citation: "NAACL 2016"
-  links:
+    - author: "Luong et al"
+      title: "Effective Approaches to Attention-based Neural Machine Translation"
+      citation: "ACL 2015"
+      url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
+- title: "Attention and Coverage"
+  tag: coverage
+  notes:
+    - author: "Tu et al"
+      title: "Modeling Coverage for Neural Machine Translation"
+      url: "http://arxiv.org/pdf/1601.04811.pdf"
+      citation: "ACL 2016"
     - author: "Cohn et al"
       title: "Incorporating Structural Alignment Biases into an Attentional Neural Translation Model"
       url: "http://arxiv.org/pdf/1601.01085.pdf"
+      citation: "NAACL 2016"
+- title: "Multilingual NMT"
+  tag: multiling
+  notes:
+    - author: "Firat, Cho and Bengio"
+      title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
+      url: "http://arxiv.org/pdf/1601.01073.pdf"
       citation: "NAACL 2016"
