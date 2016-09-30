@@ -70,3 +70,7 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 1. [Yang et al, ACL 2013](http://www.aclweb.org/anthology/P13-1017.pdf). Word Alignment Modeling with Context Dependent Deep Neural Network.
 1. [Akihiro Tamura, Taro Watanabe and Eiichiro Sumita ACL 2014](http://anthology.aclweb.org/P/P14/P14-1138.pdf). Recurrent Neural Networks for Word Alignment Model.
 
+### n-gram NMT
+
+1. [Le et al, NAACL 2012](http://www.aclweb.org/anthology/N12-1005). Continuous Space Translation Models with Neural Networks. 
+
