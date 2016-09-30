@@ -25,6 +25,7 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 1. [Mikolov et al ICASSP 2011](http://www.fit.vutbr.cz/research/groups/speech/publi/2011/mikolov_icassp2011_presentation_rnnlm-extension.pdf). Extensions of recurrent neural network language model.
 1. [Zoph, Vaswani, May, Knight, NAACL'16](http://www.isi.edu/natural-language/mt/simple-fast-noise.pdf). Simple, Fast Noise Contrastive Estimation for Large RNN Vocabularies. 
 1. [Ji, Vishwanathan, Satish, Anderson, Dubey, ICLR'16](http://arxiv.org/pdf/1511.06909.pdf). BlackOut: Speeding up Recurrent Neural Network Language Models with very Large Vocabularies. 
+1. [Merity et al, 2016](https://arxiv.org/abs/1609.07843). Pointer Sentinel Mixture Models.  
 
 ### n-gram Neural Language models
 
@@ -73,4 +74,10 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 ### n-gram NMT
 
 1. [Le et al, NAACL 2012](http://www.aclweb.org/anthology/N12-1005). Continuous Space Translation Models with Neural Networks. 
+
+### Misc
+
+1. [Yang et al, EMNLP 2016](https://arxiv.org/abs/1609.08084). Toward Socially-Infused Information Extraction: Embedding Authors, Mentions, and Entities.
+1. [Qu et al, 2016](http://people.eng.unimelb.edu.au/tbaldwin/pubs/emnlp2016-ner.pdf). Named Entity Recognition for Novel Types by Transfer Learning.
+1. [McDonald et al, EMNLP 2005](http://www.ryanmcd.com/papers/segmentationHLT-EMNLP2005.pdf). Flexible Text Segmentation with Structured Multilabel Classification.
 
