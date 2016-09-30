@@ -14,6 +14,9 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 ### Recurrent Neural Networks
 
 1. [Hochreiter & Schmidhuber, 1997](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf). Long Short-term Memory. 
+1. [Bengio et al, IEEE Trans on Neural Networks](http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf). Learning long-term dependencies with gradient descent is difficult.
+1. [Mikael Bodén 2002]({{ site.baseurl }}/assets/cached/boden-rnn-techrept.pdf). A guide to recurrent neural networks and backpropagation.
+1. [Graves et al, ICML 2006](http://www.cs.toronto.edu/~graves/icml_2006.pdf). Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks.
 
 ### RNN Language models
 
@@ -56,12 +59,14 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 1. [Xu, Ba, Kiros, Cho, Courville, Salakhutdinov, Zemel, Bengio, ICML'15](http://jmlr.org/proceedings/papers/v37/xuc15.pdf). Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. 
 1. [Jia, Liang, ACL'16](http://arxiv.org/pdf/1606.03622.pdf). Data Recombination for Neural Semantic Parsing. 
 
-### Neural Alignment
-
-1. [Akihiro Tamura, Taro Watanabe and Eiichiro Sumita ACL 2014](http://anthology.aclweb.org/P/P14/P14-1138.pdf). Recurrent Neural Networks for Word Alignment Model.
-
 ### Multi-lingual Neural MT
 
 1. [Zoph, Knight, NAACL'16](http://www.isi.edu/natural-language/mt/multi-source-neural.pdf). Multi-source neural translation. 
 1. [Dong, Wu, He, Yu, Wang, ACL'15](http://www.aclweb.org/anthology/P15-1166). Multi-task learning for multiple language translation. 
 1. [Firat, Cho, Bengio, NAACL'16](http://arxiv.org/pdf/1601.01073.pdf). Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism. 
+
+### Neural Word Alignment
+
+1. [Yang et al, ACL 2013](http://www.aclweb.org/anthology/P13-1017.pdf). Word Alignment Modeling with Context Dependent Deep Neural Network.
+1. [Akihiro Tamura, Taro Watanabe and Eiichiro Sumita ACL 2014](http://anthology.aclweb.org/P/P14/P14-1138.pdf). Recurrent Neural Networks for Word Alignment Model.
+
