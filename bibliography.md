@@ -16,6 +16,7 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 1. [Hochreiter & Schmidhuber, 1997](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf). Long Short-term Memory. 
 1. [Bengio et al, IEEE Trans on Neural Networks](http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf). Learning long-term dependencies with gradient descent is difficult.
 1. [Mikael Bodén 2002]({{ site.baseurl }}/assets/cached/boden-rnn-techrept.pdf). A guide to recurrent neural networks and backpropagation.
+1. [Pascanu et al, 2013](https://arxiv.org/abs/1211.5063). On the difficulty of training Recurrent Neural Networks.
 1. [Graves et al, ICML 2006](http://www.cs.toronto.edu/~graves/icml_2006.pdf). Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks.
 
 ### RNN Language models
