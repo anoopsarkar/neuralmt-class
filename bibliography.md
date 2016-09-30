@@ -27,6 +27,7 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 1. [Zoph, Vaswani, May, Knight, NAACL'16](http://www.isi.edu/natural-language/mt/simple-fast-noise.pdf). Simple, Fast Noise Contrastive Estimation for Large RNN Vocabularies. 
 1. [Ji, Vishwanathan, Satish, Anderson, Dubey, ICLR'16](http://arxiv.org/pdf/1511.06909.pdf). BlackOut: Speeding up Recurrent Neural Network Language Models with very Large Vocabularies. 
 1. [Merity et al, 2016](https://arxiv.org/abs/1609.07843). Pointer Sentinel Mixture Models.  
+1. [Sundermeyer, Ney, and Schluter, 2015](https://www.lsv.uni-saarland.de/fileadmin/teaching/seminars/ASR-2015/DL-Seminar/From_Feedforward_to_Recurrent_LSTM_Neural_Networks_for_Language_Modeling.pdf). From feedforward to recurrent lstm neural networks for language modeling.
 
 ### n-gram Neural Language models
 
