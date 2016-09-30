@@ -106,6 +106,14 @@
       url: "https://www.youtube.com/watch?v=VINCQghQRuM"
       author: "Alec Radford"
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
+    - title: "A Scalable Hierarchical Distributed Language Model"
+      url: "http://www.cs.toronto.edu/~amnih/papers/hlbl_final.pdf"
+      author: "Mnih and Hinton"
+      citation: "NIPS 2009"
+    - title: "A fast and simple algorithm for training neural probabilistic language models"
+      url: "http://www.cs.toronto.edu/~amnih/papers/ncelm.pdf"
+      author: "Mnih and Teh"
+      citation: "ICML 2012"
 - title: "Sequence to Sequence RNNs"
   tag: seq2seq
   current: false
