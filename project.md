@@ -72,3 +72,8 @@ Can they be mapped to another language for which we have a language model.
 
 * Latent variable RNN-LMs. See paper by Saul and Pereira.
 * Use Brown clusters to initialize word vectors for RNN-LM.
+
+### Visualization of hidden context vectors
+
+* Build a visualizer to enable debugging of NMT systems.
+
