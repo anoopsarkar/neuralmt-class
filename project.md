@@ -28,13 +28,27 @@ https://www.tensorflow.org/
 
 ## Project Ideas
 
-### Multilingual embeddings for low-resource languages
+### Scaling to larger vocabulary size
 
-Improve performance on a language pair such as Haitian Kreyol to English where there is insufficient data for training a neural MT model.
+* More scalable softmax computation.
+
+### Different RNNs for NMT
+
+* Stack RNN (equivalently LSTM) for NMT. Stack RNNs have been used for transition based dependency parsing. See Goldberg tutorial explanation of stack RNN.
+* Use a multilingual corpus. Fix alignments using HMM aligner. Use alignments to train RNN. Extract paraphrases using multilingual RNN. (see papers by Callison-Burch and collaborators for extracting paraphases)
+
+### Ensemble Models for NMT
+
+* Explore different ways to create ensemble models for NMT
+
+### Multilingual NMT
+
+* Use word embeddings for low-resource languages. Improve performance on a language pair such as Haitian Kreyol to English where there is insufficient data for training a neural MT model.
 
 ### Complex reorderings in neural MT
 
-Go beyond the attention model to capture more complex reorderings and experiment on language pairs such as Chinese-English.
+* Go beyond the attention model to capture more complex reorderings and experiment on language pairs such as Chinese-English.
+* Better attention models for complex reordering.
 
 ### Global sequence to sequence learning
 
@@ -49,3 +63,6 @@ A more ambitious idea is to map images of text to language models bypassing the 
 the visual script to machine readable text. For instance, scans of the Voynich manuscript are available from the Yale library.
 Can they be mapped to another language for which we have a language model.
 
+### Brown clustering and RNNs
+
+* Use Brown clusters to initialize word vectors for RNN-LM.
