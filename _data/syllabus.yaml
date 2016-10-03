@@ -70,7 +70,7 @@
       optional: true
 - title: "RNN Language Models"
   tag: rnnlm
-  current: true
+  current: false
   notes:
     - title: "Recurrent neural network based language model"
       author: "Mikolov et al"
@@ -103,7 +103,7 @@
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
 - title: "Sequence to Sequence RNNs"
   tag: seq2seq
-  current: false
+  current: true
   notes:
     - author: "Sutskever et al"
       title: "Sequence to Sequence Learning with Neural Networks"
