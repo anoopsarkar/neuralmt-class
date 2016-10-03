@@ -50,6 +50,10 @@ https://www.tensorflow.org/
 * Go beyond the attention model to capture more complex reorderings and experiment on language pairs such as Chinese-English.
 * Better attention models for complex reordering.
 
+### Improve SGD
+
+* Use SAG (Schmidt et al, 2015) to improve SGD for RNN-LM or NMT.
+
 ### Global sequence to sequence learning
 
 Improve upon bidirectional RNNs by exploring global inference and complex non-differentiable loss functions such as BLEU scores. Currently the state of the art is to have a layer on top of a bidirectional sequence model which does global reordering.
