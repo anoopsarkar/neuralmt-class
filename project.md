@@ -44,6 +44,7 @@ https://www.tensorflow.org/
 ### Multilingual NMT
 
 * Use word embeddings for low-resource languages. Improve performance on a language pair such as Haitian Kreyol to English where there is insufficient data for training a neural MT model.
+* Pivot based NMT.
 
 ### Complex reorderings in neural MT
 
@@ -67,6 +68,7 @@ A more ambitious idea is to map images of text to language models bypassing the 
 the visual script to machine readable text. For instance, scans of the Voynich manuscript are available from the Yale library.
 Can they be mapped to another language for which we have a language model.
 
-### Brown clustering and RNNs
+### Latent variable RNN-LMs
 
+* Latent variable RNN-LMs. See paper by Saul and Pereira.
 * Use Brown clusters to initialize word vectors for RNN-LM.
