@@ -126,6 +126,10 @@
 - title: "Gated Recurrent Units and LSTMs"
   tag: gru
   notes:
+    - author: "Bengio et al"
+      title: "Learning long-term dependencies with gradient descent is difficult"
+      citation: "IEEE Trans on Neural Networks"
+      url: "http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf"
     - author: "Chris Olah"
       title: "Understanding LSTMs"
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
