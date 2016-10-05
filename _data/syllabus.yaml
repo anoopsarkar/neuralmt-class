@@ -117,7 +117,7 @@
     - author: "Vinyals et al"
       title: "Grammar as a foreign language"
       url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
-      citation: "NIPS 2015"
+      citation: "ICLR 2015 (this version has no attention model)"
   links:
     - author: "Gu et al"
       title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
@@ -144,6 +144,11 @@
       title: "Effective Approaches to Attention-based Neural Machine Translation"
       citation: "ACL 2015"
       url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
+  links:
+    - author: "Vinyals et al"
+      title: "Grammar as a Foreign Language"
+      citation: "arXiv (this version has attention)"
+      url: "https://arxiv.org/pdf/1412.7449.pdf"
 - title: "Coverage"
   tag: coverage
   notes:
