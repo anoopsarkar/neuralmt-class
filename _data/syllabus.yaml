@@ -117,7 +117,7 @@
     - author: "Vinyals et al"
       title: "Grammar as a foreign language"
       url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
-      citation: "ICLR 2015 (this version has no attention model)"
+      citation: "ICLR 2015 **submission** (this version has no attention model)"
   links:
     - author: "Gu et al"
       title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
