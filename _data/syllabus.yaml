@@ -109,20 +109,27 @@
       title: "Sequence to Sequence Learning with Neural Networks"
       citation: "NIPS 2014"
       url: "http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf"
+      video: "https://www.microsoft.com/en-us/research/video/nips-oral-session-4-ilya-sutskever/"
     - author: "Cho et al"
       title: "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation"
       url: "https://arxiv.org/abs/1406.1078"
       citation: "EMNLP 2014"
-  links:
     - author: "Vinyals et al"
       title: "Grammar as a foreign language"
       url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
       citation: "NIPS 2015"
+  links:
     - author: "Gu et al"
       title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
       url: "http://arxiv.org/pdf/1603.06393.pdf"
       citation: "ACL 2016"
-- title: "Attention!"
+- title: "Gated Recurrent Units and LSTMs"
+  tag: gru
+  notes:
+    - author: "Chris Olah"
+      title: "Understanding LSTMs"
+      url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+- title: "Attention"
   tag: attn
   notes:
     - author: "Bahdanau et al"
@@ -133,7 +140,7 @@
       title: "Effective Approaches to Attention-based Neural Machine Translation"
       citation: "ACL 2015"
       url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
-- title: "Attention and Coverage"
+- title: "Coverage"
   tag: coverage
   notes:
     - author: "Tu et al"
