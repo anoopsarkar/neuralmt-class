@@ -103,7 +103,7 @@
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
 - title: "Sequence to Sequence RNNs"
   tag: seq2seq
-  current: true
+  current: false
   notes:
     - author: "Sutskever et al"
       title: "Sequence to Sequence Learning with Neural Networks"
@@ -125,11 +125,23 @@
       citation: "ACL 2016"
 - title: "Gated Recurrent Units and LSTMs"
   tag: gru
+  current: true
   notes:
     - author: "Bengio et al"
       title: "Learning long-term dependencies with gradient descent is difficult"
       citation: "IEEE Trans on Neural Networks"
       url: "http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf"
+    - author: "Andrej Karpathy, Justin Johnson, Fei-Fei Li"
+      title: "Visualizing and Understanding Recurrent Networks"
+      url: "https://arxiv.org/abs/1506.02078"
+      citation: "ICLR 2016"
+    - author: "Hendrik Strobelt, Sebastian Gehrmann, Bernd Huber, Hanspeter Pfister, Alexander M. Rush"
+      title: "Visual Analysis of Hidden State Dynamics in Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1606.07461"
+  links:
+    - author: "Razvan Pascanu, Tomas Mikolov, Yoshua Bengio"
+      title: "On the difficulty of training Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1211.5063"
     - author: "Chris Olah"
       title: "Understanding LSTMs"
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
