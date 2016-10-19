@@ -125,7 +125,7 @@
       citation: "ACL 2016"
 - title: "Gated Recurrent Units and LSTMs"
   tag: gru
-  current: true
+  current: false
   notes:
     - author: "Bengio et al"
       title: "Learning long-term dependencies with gradient descent is difficult"
@@ -147,6 +147,7 @@
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
 - title: "Attention"
   tag: attn
+  current: true
   notes:
     - author: "Bahdanau et al"
       title: "Neural Translation by Jointly Learning to Align and Translate"
@@ -156,11 +157,34 @@
       title: "Effective Approaches to Attention-based Neural Machine Translation"
       citation: "ACL 2015"
       url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
+    - author: "Jean et al"
+      title: "On using very large target vocabulary for neural machine translation"
+      citation: "ACL 2015"
+      url: "http://www.aclweb.org/anthology/P15-1001"
   links:
     - author: "Vinyals et al"
       title: "Grammar as a Foreign Language"
       citation: "arXiv (this version has attention)"
       url: "https://arxiv.org/pdf/1412.7449.pdf"
+- title: "Visual Attention"
+  tag: vision
+  notes:
+    - author: "Mnih et al"
+      citation: "NIPS 2014"
+      title: "Recurrent Models of Visual Attention"
+      url: "http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf"
+    - author: "Xu et al"
+      citation: "ICML 2015"
+      title: "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
+      url: "http://jmlr.org/proceedings/papers/v37/xuc15.pdf"
+    - author: "Donahue et al" 
+      title: "Long-term Recurrent Convolutional Networks for Visual Recognition and Description" 
+      citation: "CVPR 2015"
+      url: "https://arxiv.org/abs/1411.4389"
+    - author: "Gregor et al"
+      title: "DRAW: A recurrent neural network for image generation"
+      citation: "ICML 2015"
+      url: "https://arxiv.org/abs/1502.04623"
 - title: "Coverage"
   tag: coverage
   notes:
