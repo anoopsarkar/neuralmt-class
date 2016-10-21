@@ -49,13 +49,13 @@
   tag: dl4nlp
   current: false
   notes:
+    - title: "Natural Language Understanding with Distributed Representation"
+      author: "Kyunghyun Cho"
+      url: "http://arxiv.org/abs/1511.07916"
     - title: "A Primer on Neural Networks for NLP"
       author: Yoav Goldberg
       url: "http://u.cs.biu.ac.il/~yogo/nnlp.pdf" 
   links:
-    - title: "Natural Language Understanding with Distributed Representation"
-      author: "Kyunghyun Cho"
-      url: "http://arxiv.org/abs/1511.07916"
     - title: "Deep Learning for MT Winter School"
       url: "http://dl4mt.computing.dcu.ie/"
       optional: true
