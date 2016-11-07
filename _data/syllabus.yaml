@@ -209,8 +209,13 @@
       title: "Incorporating Structural Alignment Biases into an Attentional Neural Translation Model"
       url: "http://arxiv.org/pdf/1601.01085.pdf"
       citation: "NAACL 2016"
+    - author: "Tu et al"
+      title: "Context Gates for Neural Machine Translation"
+      url: "https://arxiv.org/abs/1608.06043"
+      citation: "arxiv"
 - title: "Multilingual NMT"
   tag: multiling
+  current: true
   notes:
     - author: "Firat, Cho and Bengio"
       title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
@@ -226,6 +231,7 @@
       url: "http://www.aclweb.org/anthology/P15-1166"
 - title: "n-gram Neural Language Models"
   tag: nnlm
+  current: false
   notes:
     - title: "A Neural Probabilistic Language Model" 
       author: "Bengio et al"
