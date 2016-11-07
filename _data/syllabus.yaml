@@ -147,7 +147,7 @@
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
 - title: "Attention"
   tag: attn
-  current: true
+  current: false
   notes:
     - author: "Bahdanau et al"
       title: "Neural Translation by Jointly Learning to Align and Translate"
@@ -168,6 +168,7 @@
       url: "https://arxiv.org/pdf/1412.7449.pdf"
 - title: "Visual Attention"
   tag: vision
+  current: false
   notes:
     - author: "Mnih et al"
       citation: "NIPS 2014"
@@ -185,8 +186,20 @@
       title: "DRAW: A recurrent neural network for image generation"
       citation: "ICML 2015"
       url: "https://arxiv.org/abs/1502.04623"
+- title: "Sequence Labelling using RNNs"
+  current: false
+  notes:
+    - author: "Alex Graves"
+      title: "Supervised Sequence Labelling with Recurrent Neural Networks"
+      url: "http://www.cs.toronto.edu/~graves/phd.pdf"
+      citation: "Phd Thesis"
+    - author: "Alex Graves"
+      url: "https://arxiv.org/abs/1308.0850"
+      title: "Generating Sequences With Recurrent Neural Networks"
+      citation: "arxiv"
 - title: "Coverage"
   tag: coverage
+  current: true
   notes:
     - author: "Tu et al"
       title: "Modeling Coverage for Neural Machine Translation"

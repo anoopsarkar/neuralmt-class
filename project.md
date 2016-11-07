@@ -20,11 +20,15 @@ The goal for each final project is a submission to a conference at the end of th
 
 ### Tensor Flow
 
-https://www.tensorflow.org/
+[Tensor Flow](https://www.tensorflow.org/): follow the seq2seq tutorial.
 
 ### nematus/Theano
 
 [nematus](https://github.com/rsennrich/nematus) based on Kyunghun Cho's [dl4mt tutorial](https://github.com/nyu-dl/dl4mt-tutorial).
+
+### NMT with Coverage and Context Gating
+
+[NMT with Coverage](https://github.com/tuzhaopeng/NMT) by Zhaopeng Tu built on top of Groundhog and Theano.
 
 ## Project Ideas
 
