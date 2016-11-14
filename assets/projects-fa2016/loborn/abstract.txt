@@ -1,0 +1,13 @@
+Semantic Role Labeling with a Neural Net Classifier
+
+This project aims to train a neural net classifier to perform a
+semantic role labeling task. Given a parsed sentence as input, the
+system will simplify the parse tree using a set of simplification
+rules, following Vickrey & Koller 2008 and Vickrey 2010. This will
+produce a set of simple parse trees, which are passed as inputs to
+an RNN encoder; these encodings are then combined (following the
+method given in Zoph et al. 2016) and used to predict a class for
+the set of inputs. Each output class corresponds to a possible role
+labeling, so that correct classification corresponds to correctly
+labeling the input.
+

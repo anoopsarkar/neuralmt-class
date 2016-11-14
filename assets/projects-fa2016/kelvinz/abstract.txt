@@ -1,0 +1,11 @@
+Project: Using GRU for the Alignment Score
+Student: Kelvin Cheng
+
+In the equation by Bahdanau et al., the alignment score only takes
+input of the previous target-side encoded vector and the source-side
+vector.
+
+However, the previous alignment scores might also be useful,
+especially in a long sentence. Therefore, I propose to use a GRU
+model for the alignment score, which can potentially capture more
+complex ordering.

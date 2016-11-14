@@ -1,0 +1,13 @@
+Title: Semi-supervised action localization in sports videos with temporal attention
+
+Abstract:
+Instance level annotations are more useful than holistic level annotations
+in many cases while requires extensive human labors. We propose a method
+to transfer frame level event label to instance level action label with
+few supervisions. To handle the noise and hard cases in the problem, we
+introduce a temporal attention model with the intention to let the model
+learn from the easy stereotype poses that are most distinguishable. This
+does not only enables the model to localize obvious desired actions, but
+also lays a good foundation for the model to understand more complicated
+variations.
+
