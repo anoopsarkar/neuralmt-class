@@ -229,6 +229,10 @@
       citation: "ACL 2015"
       title: "Multi-task learning for multiple language translation"
       url: "http://www.aclweb.org/anthology/P15-1166"
+    - author: "Luong et al"
+      title: "Multi-task Sequence to Sequence Learning"
+      citation: "ICLR 2016"
+      url: "https://arxiv.org/abs/1511.06114"
 - title: "n-gram Neural Language Models"
   tag: nnlm
   current: false
