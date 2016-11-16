@@ -68,6 +68,27 @@
       citation: "Nature, 1986"
       url: "https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf"
       optional: true
+- title: "n-gram Neural Language Models"
+  tag: nnlm
+  current: false
+  notes:
+    - title: "A Neural Probabilistic Language Model" 
+      author: "Bengio et al"
+      citation: "JMLR 2003"
+      url: "http://www.jmlr.org/papers/v3/bengio03a.html"
+    - title: "Decoding with large-scale neural language models improves translation"
+      author: "Vaswani et al"
+      citation: "EMNLP 2013"
+      url: "http://nlg.isi.edu/software/nplm/vaswani-emnlp13.pdf"
+      download: "http://nlg.isi.edu/software/nplm/"
+    - title: "A Scalable Hierarchical Distributed Language Model"
+      url: "http://www.cs.toronto.edu/~amnih/papers/hlbl_final.pdf"
+      author: "Mnih and Hinton"
+      citation: "NIPS 2009"
+    - title: "A fast and simple algorithm for training neural probabilistic language models"
+      url: "http://www.cs.toronto.edu/~amnih/papers/ncelm.pdf"
+      author: "Mnih and Teh"
+      citation: "ICML 2012"
 - title: "RNN Language Models"
   tag: rnnlm
   current: false
@@ -233,24 +254,3 @@
       title: "Multi-task Sequence to Sequence Learning"
       citation: "ICLR 2016"
       url: "https://arxiv.org/abs/1511.06114"
-- title: "n-gram Neural Language Models"
-  tag: nnlm
-  current: false
-  notes:
-    - title: "A Neural Probabilistic Language Model" 
-      author: "Bengio et al"
-      citation: "JMLR 2003"
-      url: "http://www.jmlr.org/papers/v3/bengio03a.html"
-    - title: "Decoding with large-scale neural language models improves translation"
-      author: "Vaswani et al"
-      citation: "EMNLP 2013"
-      url: "http://nlg.isi.edu/software/nplm/vaswani-emnlp13.pdf"
-      download: "http://nlg.isi.edu/software/nplm/"
-    - title: "A Scalable Hierarchical Distributed Language Model"
-      url: "http://www.cs.toronto.edu/~amnih/papers/hlbl_final.pdf"
-      author: "Mnih and Hinton"
-      citation: "NIPS 2009"
-    - title: "A fast and simple algorithm for training neural probabilistic language models"
-      url: "http://www.cs.toronto.edu/~amnih/papers/ncelm.pdf"
-      author: "Mnih and Teh"
-      citation: "ICML 2012"
