@@ -12,6 +12,12 @@ Final Project
 
 The goal for each final project is a submission to a conference at the end of the semester (perhaps with some more work on the paper in the Spring semester).
 
+## Data
+
+* [NLP class data](http://anoopsarkar.github.io/nlp-class/project.html) from Anoop Sarkar's NLP class.
+* [WMT 2015 data](http://www.statmt.org/wmt15/) from the Workshop on MT 2015 Shared Task on Translation.
+* [CSLM Paper Data](http://www-lium.univ-lemans.fr/~schwenk/cslm_joint_paper/) by Holger Schwenk.
+
 ## Software
 
 ### lamtram/cnn

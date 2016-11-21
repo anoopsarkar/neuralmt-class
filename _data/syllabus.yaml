@@ -89,6 +89,10 @@
       url: "http://www.cs.toronto.edu/~amnih/papers/ncelm.pdf"
       author: "Mnih and Teh"
       citation: "ICML 2012"
+    - title: "Fast and robust neural network joint models for statistical machine translation"
+      author: "Devlin et al"
+      url: "http://www.aclweb.org/anthology/P14-1129"
+      citation: "ACL 2014"
 - title: "RNN Language Models"
   tag: rnnlm
   current: false
@@ -220,7 +224,7 @@
       citation: "arxiv"
 - title: "Coverage"
   tag: coverage
-  current: true
+  current: false
   notes:
     - author: "Tu et al"
       title: "Modeling Coverage for Neural Machine Translation"
@@ -236,7 +240,7 @@
       citation: "arxiv"
 - title: "Multilingual NMT"
   tag: multiling
-  current: true
+  current: false
   notes:
     - author: "Firat, Cho and Bengio"
       title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
@@ -254,3 +258,39 @@
       title: "Multi-task Sequence to Sequence Learning"
       citation: "ICLR 2016"
       url: "https://arxiv.org/abs/1511.06114"
+- title: "Convolutional Encoders for NMT"
+  tag: convonmt
+  current: true
+  notes:
+    - author: "Kalchbrenner and Blunsom"
+      title: "Recurrent Continuous Translation Models"
+      url: "http://www.aclweb.org/anthology/D13-1176"
+      citation: "EMNLP 2013"
+    - author: "Gehring et al"
+      title: "A Convolutional Encoder Model for Neural Machine Translation"
+      url: "https://arxiv.org/abs/1611.02344"
+      citation: "arxiv 2016"
+    - author: "Lamb and Xie"
+      title: "Convolutional Encoders for Neural Machine Translation"
+      url: "https://cs224d.stanford.edu/reports/LambAndrew.pdf"
+      citation: "unpublished manuscript 2016"
+    - author: "Tu et al"
+      title: "Context-Dependent Translation Selection Using Convolutional Neural Network"
+      url: "http://www.aclweb.org/anthology/P15-2088"
+      citation: "ACL-IJCNLP 2015"
+    - author: "Meng et al"
+      title: "Encoding Source Language with Convolutional Neural Network for Machine Translation"
+      url: "http://www.aclweb.org/anthology/P15-1003.pdf"
+      citation: "ACL-IJCNLP 2015"
+- title: "Tree RNNs"
+  tag: treernn
+  current: false
+  notes:
+    - author: "Kiperwasser and Goldberg"
+      title: "Easy-First Dependency Parsing with Hierarchical Tree LSTMs"
+      url: "https://arxiv.org/pdf/1603.00375.pdf"
+      citation: "arxiv 2016"
+    - author: "Dyer et al"
+      title: "Recurrent Neural Network Grammars"
+      url: "https://arxiv.org/abs/1602.07776"
+      citation: "NAACL 2016"
