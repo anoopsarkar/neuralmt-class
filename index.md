@@ -41,8 +41,8 @@ Grading
 : Submit project source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/)
 
 * In class presentations: 40%
-* Project stages: Project 1, 2 and 3; 10% each.
-* Final project: 30%.
+* Project stages: 30%
+* Final project: 30%. Due on December 15, 2016
 
 Presentation Sign-up
 : [In Class Presentation Sign-up](http://goo.gl/w8C4aV)

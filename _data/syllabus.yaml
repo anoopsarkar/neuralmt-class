@@ -186,6 +186,10 @@
       title: "On using very large target vocabulary for neural machine translation"
       citation: "ACL 2015"
       url: "http://www.aclweb.org/anthology/P15-1001"
+    - author: "Zhou et al"
+      title: "Deep Recurrent Models with Fast-Forward Connections for Neural Machine Translation"
+      url: "https://arxiv.org/abs/1606.04199"
+      citation: "TACL 2016"
   links:
     - author: "Vinyals et al"
       title: "Grammar as a Foreign Language"
@@ -282,6 +286,22 @@
       title: "Encoding Source Language with Convolutional Neural Network for Machine Translation"
       url: "http://www.aclweb.org/anthology/P15-1003.pdf"
       citation: "ACL-IJCNLP 2015"
+- title: "Character level NMT"
+  tag: charnmt
+  current: false
+  notes:
+    - author: "Lee et al"
+      title: "Fully Character-Level Neural Machine Translation without Explicit Segmentation"
+      url: "https://arxiv.org/pdf/1610.03017v2.pdf"
+      citation: "arxiv 2016"
+    - author: "Costa-Jussa et al"
+      title: "Character-based neural machine translation"
+      citation: "ACL 2016"
+      url: "https://arxiv.org/abs/1603.00810"
+    - author: "Chung et al"
+      title: "A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation"
+      url: "https://www.aclweb.org/anthology/P/P16/P16-1160.pdf"
+      citation: "ACL 2016"
 - title: "Tree RNNs"
   tag: treernn
   current: false
