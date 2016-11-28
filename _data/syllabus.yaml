@@ -264,7 +264,7 @@
       url: "https://arxiv.org/abs/1511.06114"
 - title: "Convolutional Encoders for NMT"
   tag: convonmt
-  current: true
+  current: false
   notes:
     - author: "Kalchbrenner and Blunsom"
       title: "Recurrent Continuous Translation Models"
@@ -288,7 +288,7 @@
       citation: "ACL-IJCNLP 2015"
 - title: "Character level NMT"
   tag: charnmt
-  current: false
+  current: true
   notes:
     - author: "Lee et al"
       title: "Fully Character-Level Neural Machine Translation without Explicit Segmentation"
@@ -302,6 +302,9 @@
       title: "A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation"
       url: "https://www.aclweb.org/anthology/P/P16/P16-1160.pdf"
       citation: "ACL 2016"
+    - author: "Sennrich et al"
+      title: "Neural Machine Translation of Rare Words with Subword Units"
+      url: "https://arxiv.org/pdf/1508.07909v5.pdf"
 - title: "Tree RNNs"
   tag: treernn
   current: false
