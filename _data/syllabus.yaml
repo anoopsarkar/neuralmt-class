@@ -288,7 +288,7 @@
       citation: "ACL-IJCNLP 2015"
 - title: "Character level NMT"
   tag: charnmt
-  current: true
+  current: false
   notes:
     - author: "Lee et al"
       title: "Fully Character-Level Neural Machine Translation without Explicit Segmentation"
@@ -307,11 +307,21 @@
       url: "https://arxiv.org/pdf/1508.07909v5.pdf"
 - title: "Tree RNNs"
   tag: treernn
-  current: false
+  current: true
   notes:
+    - author: "Chen and Manning"
+      title: "A Fast and Accurate Dependency Parser using Neural Networks"
+      url: "http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf"
+      download: "http://cs.stanford.edu/people/danqi/papers/emnlp2014_slides.pdf"
+      citation: "EMNLP 2014"
+    - author: "Dyer et al"
+      title: "Transition-based dependency parsing with stack long short-term memory"
+      citation: "ACL 2015"
+      url: "http://www.aclweb.org/anthology/P15-1033"
     - author: "Kiperwasser and Goldberg"
       title: "Easy-First Dependency Parsing with Hierarchical Tree LSTMs"
       url: "https://arxiv.org/pdf/1603.00375.pdf"
+      download: "https://dl.dropboxusercontent.com/u/5761922/emnlp16.pdf"
       citation: "arxiv 2016"
     - author: "Dyer et al"
       title: "Recurrent Neural Network Grammars"
