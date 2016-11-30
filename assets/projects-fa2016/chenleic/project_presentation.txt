@@ -1,0 +1,11 @@
+Title: Semi-supervised action localization in sports videos with temporal attention
+
+how is the loss function computed? bounding box on test images are given?
+
+is the frame network an LSTM or GRU? it was not clear what the "frame network" is supposed to be.
+
+what happens if a frame has lots more players than other frames?
+
+"9 frames are sampled" => not really sampling
+
+no averages in the results for semi-sup from supervised
