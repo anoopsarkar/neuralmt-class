@@ -57,10 +57,17 @@ Also see [References from the ACL 2016 Tutorial](https://sites.google.com/site/a
 
 ### Encoder-Decoder Neural Networks
 
+1. [Cho+, EMNLP 2014](https://arxiv.org/abs/1406.1078) Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation.
 1. [Mnih et al., NIPS'14](http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf) Recurrent Models of Visual Attention. 
 1. [Sutskever et al., NIPS'14](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf). Sequence to Sequence Learning with Neural Networks. 
 1. [Xu, Ba, Kiros, Cho, Courville, Salakhutdinov, Zemel, Bengio, ICML'15](http://jmlr.org/proceedings/papers/v37/xuc15.pdf). Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. 
 1. [Jia, Liang, ACL'16](http://arxiv.org/pdf/1606.03622.pdf). Data Recombination for Neural Semantic Parsing. 
+
+### Encoder-Decoder Plus Reinforce
+
+1. [Zaremba and Sutskever, ICLR 2016](https://arxiv.org/pdf/1505.00521.pdf) Reinforcement learning neural turing machines - revisited.
+1. [Ranzato+, ICLR 2016](https://arxiv.org/pdf/1511.06732.pdf) Sequence level training with RNNs.
+1. [Bahdanau+, arXiv 2017](https://arxiv.org/abs/1607.07086) An actor-critic algorithm for sequence prediction.
 
 ### Multi-lingual Neural MT
 
