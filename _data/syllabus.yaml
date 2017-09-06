@@ -22,6 +22,10 @@
       citation: "Tutorial at ACL 2016"
       url: "https://sites.google.com/site/acl16nmt/"
       download: "assets/cached/Luong-Cho-Manning-NMT-ACL2016-v4.pdf"
+    - title: "Neural Machine Translation and Sequence-to-sequence Models: A Tutorial"
+      author: "Graham Neubig"
+      citation: "arXiv"
+      url: "https://arxiv.org/pdf/1703.01619.pdf"
   links:
     - title: "Neural Machine Translation: Breaking the Performance Plateau"
       author: Rico Sennrich

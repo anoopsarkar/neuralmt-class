@@ -1,5 +1,5 @@
 exclude: ['README.md','assets/latex']
 timezone: US/Pacific
 markdown: kramdown
-coursys: "https://courses.cs.sfu.ca/2016fa-cmpt-882-g2/"
+coursys: "https://courses.cs.sfu.ca/2017fa-cmpt-882-g1/"
 leaderboard: "https://sfu-nlp-class.appspot.com"

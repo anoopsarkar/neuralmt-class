@@ -7,7 +7,7 @@ caption: "Kalchbrenner and Blunsom (EMNLP 2013) encoded the source language inpu
 active_tab: main_page 
 ---
 
-## Neural Machine Translation <span class="text-muted">Fall 2016</span>
+## Neural Machine Translation <span class="text-muted">Fall 2017</span>
 
 This is a special topics course entitled "Neural Machine Translation".
 This is an advanced graduate seminar course is about recursive
@@ -23,26 +23,27 @@ neural MT) and in the proper modeling of alignment (aka attention).
 
 Instructor
 : [Anoop Sarkar](http://www.cs.sfu.ca/~anoop/) 
-: Office Hours: Mondays 3pm-4pm TASC1 9427
+: Office Hours: Thursdays 9:30am-10:30am TASC1 9427
 
 Discussion Board
-: [on Coursys](https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/discussion/)
+: [on Coursys]({{ site.coursys }}/discussion)
 
 Time and place
-: MWF 11:30-12:20, SECB 1011
+: MW 2:30-4:00, AQ 5008
 
 Calendar
-: [Subscribe](https://courses.cs.sfu.ca/news/75221d0252e1cdacf94dac56b78600e9/anoop)
+: [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
 
 Textbook
 : No required textbook. Online readings provided in Syllabus.
 
 Grading
-: Submit project source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016fa-cmpt-413-x1/)
+: Activities and grades on [Coursys]({{ site.coursys }})
 
 * In class presentations: 40%
-* Project stages: 30%
+* Discussion board: 20%
+* Project stages: 10%
 * Final project: 30%. Due on December 15, 2016
 
 Presentation Sign-up
-: [In Class Presentation Sign-up](http://goo.gl/w8C4aV)
+: [In Class Presentation Sign-up](https://docs.google.com/spreadsheets/d/1WVTtcJLLK_RlhzSeZmdIveAPjga-tjecqvV-deOG16g/edit?usp=sharing)
