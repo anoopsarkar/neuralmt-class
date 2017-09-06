@@ -1,6 +1,6 @@
 - title: "Course Introduction"
   tag: intro
-  current: false
+  current: true
   notes:
     - title: "Statistical Machine Translation"
       url: "assets/slides/smt-intro.pdf"
@@ -33,7 +33,7 @@
       download: "assets/cached/09_sennrich.pdf"
     - title: "Several Studies on Natural Language and Back-propagation"
       author: "Robert B. Allen"
-      url: "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.716.2719&rep=rep1&type=pdf"
+      url: "http://boballen.info/RBA/PAPERS/NL-BP/nl-bp.pdf"
       download: "assets/cached/10.1.1.716.2719.pdf"
       optional: true
     - title: "Learning recursive distributed representations for holistic computation"
@@ -311,7 +311,7 @@
       url: "https://arxiv.org/pdf/1508.07909v5.pdf"
 - title: "Tree RNNs"
   tag: treernn
-  current: true
+  current: false
   notes:
     - author: "Chen and Manning"
       title: "A Fast and Accurate Dependency Parser using Neural Networks"
