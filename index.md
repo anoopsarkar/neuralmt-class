@@ -23,7 +23,7 @@ neural MT) and in the proper modeling of alignment (aka attention).
 
 Instructor
 : [Anoop Sarkar](http://www.cs.sfu.ca/~anoop/) 
-: Office Hours: Thursdays 9:30am-10:30am TASC1 9427
+: Office Hours: Wednesday 9:30am-10:30am TASC1 9427
 
 Discussion Board
 : [on Coursys]({{ site.coursys }}/discussion)
@@ -43,7 +43,7 @@ Grading
 * In class presentations: 40%
 * Discussion board: 20%
 * Project stages: 10%
-* Final project: 30%. Due on December 15, 2016
+* Final project: 30%. Due on December 4, 2017
 
 Presentation Sign-up
 : [In Class Presentation Sign-up](https://docs.google.com/spreadsheets/d/1WVTtcJLLK_RlhzSeZmdIveAPjga-tjecqvV-deOG16g/edit?usp=sharing)
