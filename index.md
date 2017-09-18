@@ -46,4 +46,4 @@ Grading
 * Final project: 30%. Due on December 4, 2017
 
 Presentation Sign-up
-: [In Class Presentation Sign-up](https://docs.google.com/spreadsheets/d/1WVTtcJLLK_RlhzSeZmdIveAPjga-tjecqvV-deOG16g/edit?usp=sharing)
+: [Sign-up](https://docs.google.com/spreadsheets/d/1WVTtcJLLK_RlhzSeZmdIveAPjga-tjecqvV-deOG16g/edit?usp=sharing)
