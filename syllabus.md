@@ -7,7 +7,7 @@ title: Syllabus
 active_tab: syllabus
 ---
 
-## Readings
+## Syllabus
 
 <style type="text/css">
     .bs-example{
@@ -18,6 +18,7 @@ active_tab: syllabus
 <div class="bs-example">
     <div class="panel-group" id="accordion">
         {% for week in site.data.syllabus %}
+            {% if week.include %}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
@@ -45,9 +46,6 @@ active_tab: syllabus
                             {% endif %}
                             {% if notes.author %} 
                                 ({{ notes.author }}) 
-                            {% endif %}
-                            {%if notes.citation %}
-                                {{ notes.citation }}.
                             {% endif %}
                         </li>
                       {% endfor %}
@@ -85,6 +83,7 @@ active_tab: syllabus
                 </div>
                 </div>
             </div>
+            {% endif %}
         {% endfor %}
     </div>
 </div>

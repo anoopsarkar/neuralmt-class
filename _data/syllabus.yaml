@@ -1,6 +1,7 @@
 - title: "Course Introduction"
   tag: intro
-  current: true
+  include: true
+  current: false
   notes:
     - title: "Statistical Machine Translation"
       url: "assets/slides/smt-intro.pdf"
@@ -15,7 +16,8 @@
       url: "http://anoopsarkar.github.io/nlp-class/assets/slides/06-decoding.pdf"
 - title: "Introduction to Neural MT"
   tag: tutorial
-  current: false
+  include: true
+  current: true
   notes:
     - title: "Neural Machine Translation"
       author: "Thang Luong, Kyunghyun Cho and Chris Manning"
@@ -52,6 +54,7 @@
       optional: true
 - title: "Neural Network Models and Training"
   tag: dl4nlp
+  include: true
   current: false
   notes:
     - title: "Natural Language Understanding with Distributed Representation"
@@ -73,8 +76,32 @@
       citation: "Nature, 1986"
       url: "https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf"
       optional: true
+- title: "Gated Recurrent Units and LSTMs"
+  tag: gru
+  include: true
+  current: false
+  notes:
+    - author: "Bengio et al"
+      title: "Learning long-term dependencies with gradient descent is difficult"
+      citation: "IEEE Trans on Neural Networks"
+      url: "http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf"
+    - author: "Andrej Karpathy, Justin Johnson, Fei-Fei Li"
+      title: "Visualizing and Understanding Recurrent Networks"
+      url: "https://arxiv.org/abs/1506.02078"
+      citation: "ICLR 2016"
+    - author: "Hendrik Strobelt, Sebastian Gehrmann, Bernd Huber, Hanspeter Pfister, Alexander M. Rush"
+      title: "Visual Analysis of Hidden State Dynamics in Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1606.07461"
+  links:
+    - author: "Razvan Pascanu, Tomas Mikolov, Yoshua Bengio"
+      title: "On the difficulty of training Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1211.5063"
+    - author: "Chris Olah"
+      title: "Understanding LSTMs"
+      url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
 - title: "n-gram Neural Language Models"
   tag: nnlm
+  include: false
   current: false
   notes:
     - title: "A Neural Probabilistic Language Model" 
@@ -100,6 +127,7 @@
       citation: "ACL 2014"
 - title: "RNN Language Models"
   tag: rnnlm
+  include: true
   current: false
   notes:
     - title: "Recurrent neural network based language model"
@@ -133,6 +161,7 @@
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
 - title: "Sequence to Sequence RNNs"
   tag: seq2seq
+  include: true
   current: false
   notes:
     - author: "Sutskever et al"
@@ -153,30 +182,9 @@
       title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
       url: "http://arxiv.org/pdf/1603.06393.pdf"
       citation: "ACL 2016"
-- title: "Gated Recurrent Units and LSTMs"
-  tag: gru
-  current: false
-  notes:
-    - author: "Bengio et al"
-      title: "Learning long-term dependencies with gradient descent is difficult"
-      citation: "IEEE Trans on Neural Networks"
-      url: "http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf"
-    - author: "Andrej Karpathy, Justin Johnson, Fei-Fei Li"
-      title: "Visualizing and Understanding Recurrent Networks"
-      url: "https://arxiv.org/abs/1506.02078"
-      citation: "ICLR 2016"
-    - author: "Hendrik Strobelt, Sebastian Gehrmann, Bernd Huber, Hanspeter Pfister, Alexander M. Rush"
-      title: "Visual Analysis of Hidden State Dynamics in Recurrent Neural Networks"
-      url: "https://arxiv.org/abs/1606.07461"
-  links:
-    - author: "Razvan Pascanu, Tomas Mikolov, Yoshua Bengio"
-      title: "On the difficulty of training Recurrent Neural Networks"
-      url: "https://arxiv.org/abs/1211.5063"
-    - author: "Chris Olah"
-      title: "Understanding LSTMs"
-      url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
 - title: "Attention"
   tag: attn
+  include: true
   current: false
   notes:
     - author: "Bahdanau et al"
@@ -202,6 +210,7 @@
       url: "https://arxiv.org/pdf/1412.7449.pdf"
 - title: "Visual Attention"
   tag: vision
+  include: false
   current: false
   notes:
     - author: "Mnih et al"
@@ -221,6 +230,7 @@
       citation: "ICML 2015"
       url: "https://arxiv.org/abs/1502.04623"
 - title: "Sequence Labelling using RNNs"
+  include: true
   current: false
   notes:
     - author: "Alex Graves"
@@ -233,6 +243,7 @@
       citation: "arxiv"
 - title: "Coverage"
   tag: coverage
+  include: true
   current: false
   notes:
     - author: "Tu et al"
@@ -249,6 +260,7 @@
       citation: "arxiv"
 - title: "Multilingual NMT"
   tag: multiling
+  include: true
   current: false
   notes:
     - author: "Firat, Cho and Bengio"
@@ -269,6 +281,7 @@
       url: "https://arxiv.org/abs/1511.06114"
 - title: "Convolutional Encoders for NMT"
   tag: convonmt
+  include: true
   current: false
   notes:
     - author: "Kalchbrenner and Blunsom"
@@ -293,6 +306,7 @@
       citation: "ACL-IJCNLP 2015"
 - title: "Character level NMT"
   tag: charnmt
+  include: true
   current: false
   notes:
     - author: "Lee et al"
@@ -312,6 +326,7 @@
       url: "https://arxiv.org/pdf/1508.07909v5.pdf"
 - title: "Tree RNNs"
   tag: treernn
+  include: true
   current: false
   notes:
     - author: "Chen and Manning"
