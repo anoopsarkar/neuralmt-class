@@ -125,6 +125,11 @@
       citation: "ICLR 2016"
       url: "https://arxiv.org/abs/1511.06114"
       optional: true
+    - author: "Firat et al"
+      title: "Multi-way, multilingual neural machine translation"
+      citation: "Computer, Speech and Language"
+      url: "http://www.sciencedirect.com/science/article/pii/S0885230816301097"
+      optional: true
 - title: "Sequence level training of RNNs (Oct 16: Hassan S.)"
   tag: reinforce
   include: true
