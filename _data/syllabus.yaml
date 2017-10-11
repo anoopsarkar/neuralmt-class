@@ -111,8 +111,8 @@
     - author: "Luong et al"
       title: "Multi-task Sequence to Sequence Learning"
       citation: "ICLR 2016"
-      url: "https://arxiv.org/abs/1511.06114"
       optional: true
+      url: "https://arxiv.org/abs/1511.06114"
     - author: "Zoph et al"
       citation: "NAACL 2016"
       title: "Multi-source neural translation"
