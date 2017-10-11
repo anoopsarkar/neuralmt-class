@@ -17,7 +17,7 @@
 - title: "Introduction to Neural MT"
   tag: tutorial
   include: true
-  current: true
+  current: false
   notes:
     - title: "Neural Machine Translation"
       author: "Thang Luong, Kyunghyun Cho and Chris Manning"
@@ -99,6 +99,46 @@
     - author: "Chris Olah"
       title: "Understanding LSTMs"
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+- title: "Multilingual NMT (Oct 11: Nishant K.)"
+  tag: multiling
+  include: true
+  current: true
+  notes:
+    - author: "Firat, Cho and Bengio"
+      title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
+      url: "http://arxiv.org/pdf/1601.01073.pdf"
+      citation: "NAACL 2016"
+    - author: "Luong et al"
+      title: "Multi-task Sequence to Sequence Learning"
+      citation: "ICLR 2016"
+      url: "https://arxiv.org/abs/1511.06114"
+      optional: true
+    - author: "Zoph et al"
+      citation: "NAACL 2016"
+      title: "Multi-source neural translation"
+      url: "http://www.isi.edu/natural-language/mt/multi-source-neural.pdf"
+    - author: "Dong et al"
+      citation: "ACL 2015"
+      title: "Multi-task learning for multiple language translation"
+      url: "http://www.aclweb.org/anthology/P15-1166"
+- title: "Sequence level training of RNNs (Oct 16: Hassan S.)"
+  tag: reinforce
+  include: true
+  current: false
+  notes:
+    - author: Ranzato, Chopra, Auli, Zaremba
+      title: "Sequence Level Training with Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1511.06732"
+      citation: "ICLR 2016"
+- title: "Actor-critic training of RNNs (Oct 18: Payam M.)"
+  tag: actorcritic
+  include: true
+  current: false
+  notes:
+    - author: Bahdanau et al.
+      title: "An Actor-Critic Algorithm for Sequence Prediction"
+      url: "https://arxiv.org/abs/1607.07086"
+      citation: "ICLR 2017"
 - title: "n-gram Neural Language Models"
   tag: nnlm
   include: false
@@ -127,7 +167,7 @@
       citation: "ACL 2014"
 - title: "RNN Language Models"
   tag: rnnlm
-  include: true
+  include: false
   current: false
   notes:
     - title: "Recurrent neural network based language model"
@@ -161,7 +201,7 @@
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
 - title: "Sequence to Sequence RNNs"
   tag: seq2seq
-  include: true
+  include: false
   current: false
   notes:
     - author: "Sutskever et al"
@@ -184,7 +224,7 @@
       citation: "ACL 2016"
 - title: "Attention"
   tag: attn
-  include: true
+  include: false
   current: false
   notes:
     - author: "Bahdanau et al"
@@ -230,7 +270,7 @@
       citation: "ICML 2015"
       url: "https://arxiv.org/abs/1502.04623"
 - title: "Sequence Labelling using RNNs"
-  include: true
+  include: false
   current: false
   notes:
     - author: "Alex Graves"
@@ -243,7 +283,7 @@
       citation: "arxiv"
 - title: "Coverage"
   tag: coverage
-  include: true
+  include: false
   current: false
   notes:
     - author: "Tu et al"
@@ -258,30 +298,9 @@
       title: "Context Gates for Neural Machine Translation"
       url: "https://arxiv.org/abs/1608.06043"
       citation: "arxiv"
-- title: "Multilingual NMT"
-  tag: multiling
-  include: true
-  current: false
-  notes:
-    - author: "Firat, Cho and Bengio"
-      title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
-      url: "http://arxiv.org/pdf/1601.01073.pdf"
-      citation: "NAACL 2016"
-    - author: "Zoph et al"
-      citation: "NAACL 2016"
-      title: "Multi-source neural translation"
-      url: "http://www.isi.edu/natural-language/mt/multi-source-neural.pdf"
-    - author: "Dong et al"
-      citation: "ACL 2015"
-      title: "Multi-task learning for multiple language translation"
-      url: "http://www.aclweb.org/anthology/P15-1166"
-    - author: "Luong et al"
-      title: "Multi-task Sequence to Sequence Learning"
-      citation: "ICLR 2016"
-      url: "https://arxiv.org/abs/1511.06114"
 - title: "Convolutional Encoders for NMT"
   tag: convonmt
-  include: true
+  include: false
   current: false
   notes:
     - author: "Kalchbrenner and Blunsom"
@@ -306,7 +325,7 @@
       citation: "ACL-IJCNLP 2015"
 - title: "Character level NMT"
   tag: charnmt
-  include: true
+  include: false
   current: false
   notes:
     - author: "Lee et al"
@@ -326,7 +345,7 @@
       url: "https://arxiv.org/pdf/1508.07909v5.pdf"
 - title: "Tree RNNs"
   tag: treernn
-  include: true
+  include: false
   current: false
   notes:
     - author: "Chen and Manning"
