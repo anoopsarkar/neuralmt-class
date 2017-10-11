@@ -120,6 +120,9 @@
       title: "Multi-task learning for multiple language translation"
       url: "http://www.aclweb.org/anthology/P15-1166"
   links:
+    - author: "Firat et al"
+      title: "Code for their NAACL 2016 and CSL journal paper"
+      url: "https://github.com/nyu-dl/dl4mt-multi"
     - author: "Luong et al"
       title: "Multi-task Sequence to Sequence Learning"
       citation: "ICLR 2016"
