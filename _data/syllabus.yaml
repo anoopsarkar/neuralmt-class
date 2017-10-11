@@ -81,24 +81,27 @@
   include: true
   current: false
   notes:
+    - author: "Razvan Pascanu, Tomas Mikolov, Yoshua Bengio"
+      title: "On the difficulty of training Recurrent Neural Networks"
+      url: "https://arxiv.org/abs/1211.5063"
     - author: "Bengio et al"
       title: "Learning long-term dependencies with gradient descent is difficult"
       citation: "IEEE Trans on Neural Networks"
       url: "http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf"
+  links:
     - author: "Andrej Karpathy, Justin Johnson, Fei-Fei Li"
       title: "Visualizing and Understanding Recurrent Networks"
       url: "https://arxiv.org/abs/1506.02078"
       citation: "ICLR 2016"
+      optional: true
     - author: "Hendrik Strobelt, Sebastian Gehrmann, Bernd Huber, Hanspeter Pfister, Alexander M. Rush"
       title: "Visual Analysis of Hidden State Dynamics in Recurrent Neural Networks"
       url: "https://arxiv.org/abs/1606.07461"
-  links:
-    - author: "Razvan Pascanu, Tomas Mikolov, Yoshua Bengio"
-      title: "On the difficulty of training Recurrent Neural Networks"
-      url: "https://arxiv.org/abs/1211.5063"
+      optional: true
     - author: "Chris Olah"
       title: "Understanding LSTMs"
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+      optional: true
 - title: "Multilingual NMT (Oct 11: Nishant K.)"
   tag: multiling
   include: true
@@ -108,11 +111,6 @@
       title: "Multi-Way, Multilingual Neural Machine Translation with a Shared Attention Mechanism"
       url: "http://arxiv.org/pdf/1601.01073.pdf"
       citation: "NAACL 2016"
-    - author: "Luong et al"
-      title: "Multi-task Sequence to Sequence Learning"
-      citation: "ICLR 2016"
-      optional: true
-      url: "https://arxiv.org/abs/1511.06114"
     - author: "Zoph et al"
       citation: "NAACL 2016"
       title: "Multi-source neural translation"
@@ -121,6 +119,12 @@
       citation: "ACL 2015"
       title: "Multi-task learning for multiple language translation"
       url: "http://www.aclweb.org/anthology/P15-1166"
+  links:
+    - author: "Luong et al"
+      title: "Multi-task Sequence to Sequence Learning"
+      citation: "ICLR 2016"
+      url: "https://arxiv.org/abs/1511.06114"
+      optional: true
 - title: "Sequence level training of RNNs (Oct 16: Hassan S.)"
   tag: reinforce
   include: true
