@@ -142,6 +142,9 @@
       title: "Sequence Level Training with Recurrent Neural Networks"
       url: "https://arxiv.org/abs/1511.06732"
       citation: "ICLR 2016"
+    - author: Zaremba, Sutskever
+      title: "Reinforcement Learning Neural Turing Machines - Revised"
+      url: "https://arxiv.org/abs/1505.00521"
 - title: "Actor-critic training of RNNs (Oct 18: Payam M.)"
   tag: actorcritic
   include: true
