@@ -154,6 +154,83 @@
       title: "An Actor-Critic Algorithm for Sequence Prediction"
       url: "https://arxiv.org/abs/1607.07086"
       citation: "ICLR 2017"
+- title: "Convolutional sequence to sequence learning (Oct 23: P. Gujjar)"
+  tag: convonmt
+  include: true
+  current: false
+  notes:
+    - author: Gehring, Auli, Grangier, Yarats, Dauphin
+      title: "Convolutional sequence to sequence learning"
+      url: "https://arxiv.org/abs/1705.03122"
+      citation: "arXiv:1705.03122, 2017"
+    - author: Kalchbrenner, Blunsom
+      title: "Recurrent continuous translation models"
+      url: "http://www.aclweb.org/anthology/D13-1176"
+      citation: "EMNLP 2013"
+  links:
+    - title: "DeepL Translator"
+      url: "https://www.deepl.com/press.html"
+    - title: "DEEPL Machine Translation Vs our Challenge Set"
+      url: "https://medium.com/@pisabell/deepl-machine-translation-vs-our-challenge-set-e872ef12c910"
+      author: Pierre Isabelle
+    - title: "A Challenge Set Approach to Evaluating Machine Translation"
+      author: Isabelle, Cherry, Foster
+      url: "https://arxiv.org/abs/1704.07431"
+      citation: "EMNLP 2017"
+- title: "Multi-lingual word embedding (Oct 25: R. Gunasekaran)"
+  tag: wembs
+  include: true
+  current: false
+  notes:
+    - title: "A survey of cross-lingual embedding models"
+      author: S. Ruder
+      url: "https://arxiv.org/abs/1706.04902"
+      citation: "arXiv:1706.04902, 2017"
+    - title: "Cross-lingual Models of Word Embeddings: An Empirical Comparison"
+      author: Upadhyay, Faruqui, Dyer, Roth
+      url: "https://arxiv.org/abs/1604.00425"
+      citation: "ACL 2016"
+  links:
+    - title: "A survey of cross-lingual embedding models"
+      author: S. Ruder
+      url: "http://ruder.io/cross-lingual-embeddings/"
+- title: "Neural Paraphrasing (Oct 30: M. Kierans)"
+  tag: paraphrase
+  include: true
+  current: false
+  notes:
+    - title: "Learning to Paraphrase for Question Answering"
+      author: Dong, Mallinson, Reddy, Lapata
+      url: "https://www.aclweb.org/anthology/D17-1092"
+      citation: "EMNLP 2017"
+    - title: "Neural Paraphrase Generation with Stacked Residual LSTM Networks"
+      author: Prakash, Hasan, Lee, Datla, Qadir, Liu, Farri
+      url: "https://arxiv.org/pdf/1610.03098v3.pdf"
+      citation: "COLING 2016"
+  links:
+    - title: "Improving Statistical Machine Translation with a Multilingual Paraphrase Database"
+      author: Seraj, Siahbani, Sarkar
+      url: "http://aclweb.org/anthology/D15-1163"
+      citation: "EMNLP 2015"
+- title: "Stack LSTMs and NMT (<b>Tue</b> Oct 31 9:30am: J. Gu)"
+  tag: stacklstms
+  include: true
+  current: false
+  notes:
+    - title: "<i>Make up class: Different time and place. No class on Wed, Nov 1</i>. <b>Tue, Oct 31, 9:30am in TASC1 9408</b>"
+      url: "syllabus.html"
+    - title: "Greedy Transition-Based Dependency Parsing with Stack LSTMs"
+      author: Dyer, Ballesteros, Ling, Matthews, Smith
+      url: "http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00285"
+      citation: "Comput. Ling. 2016"
+    - title: "Recurrent Neural Network Grammars"
+      author: Dyer, Kuncoro, Ballesteros, Smith
+      url: "https://arxiv.org/abs/1602.07776"
+      citation: "NAACL 2016"
+    - title: "Learning to Parse and Translate Improves Neural Network Translation"
+      author: Eriguchi, Tsuruoka, Cho
+      url: "https://arxiv.org/abs/1702.03525"
+      citation: "ACL 2017" 
 - title: "n-gram Neural Language Models"
   tag: nnlm
   include: false
