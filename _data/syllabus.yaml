@@ -168,6 +168,10 @@
       url: "http://www.aclweb.org/anthology/D13-1176"
       citation: "EMNLP 2013"
   links:
+    - title: "A Neural Attention Model for Abstractive Sentence Summarization"
+      author: Rush, Chopra, Weston
+      url: "https://arxiv.org/abs/1509.00685"
+      citation: "EMNLP 2015"
     - title: "DeepL Translator"
       url: "https://www.deepl.com/press.html"
     - title: "DEEPL Machine Translation Vs our Challenge Set"
