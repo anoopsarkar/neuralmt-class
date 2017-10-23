@@ -148,7 +148,7 @@
 - title: "Actor-critic training of RNNs (Oct 18: Payam M.)"
   tag: actorcritic
   include: true
-  current: true
+  current: false
   notes:
     - author: Bahdanau et al.
       title: "An Actor-Critic Algorithm for Sequence Prediction"
@@ -157,7 +157,7 @@
 - title: "Convolutional sequence to sequence learning (Oct 23: P. Gujjar)"
   tag: convonmt
   include: true
-  current: false
+  current: true
   notes:
     - author: Gehring, Auli, Grangier, Yarats, Dauphin
       title: "Convolutional sequence to sequence learning"
