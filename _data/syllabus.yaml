@@ -241,11 +241,13 @@
   current: false
   notes:
     - title: Attention is all you need. 
+      author: Vaswani et al.
       url: "https://arxiv.org/abs/1706.03762"
     - title: One model to learn them all. 
+      author: Kaiser et al.
       url: "https://arxiv.org/abs/1706.05137"
   links:
-    - title: Tensor2Tensor. 
+    - title: Tensor2Tensor
       url: "https://github.com/tensorflow/tensor2tensor"
 - title: Sentence representations
   tag: skipthought
@@ -253,10 +255,13 @@
   current: false
   notes:
     - title: Learning Distributed Representations of Sentences from Unlabelled Data. 
+      author: Hill, Cho, Korhonen
       url: "http://www.aclweb.org/anthology/N16-1162"
     - title: Learning Generic Sentence Representations Using Convolutional Neural Networks. 
+      author: Gan et al.
       url: "http://aclweb.org/anthology/D/D17/D17-1253.pdf"
     - title: Skip-thought vectors. 
+      author: Kiros et al.
       url: "https://arxiv.org/abs/1506.06726"
 - title: Understanding attention
   tag: shortattention
@@ -264,9 +269,13 @@
   current: false
   notes:
     - title: Frustratingly Short Attention Spans in Neural Language Modeling. 
-      url: "http://openreview.net/pdf?id=ByIAPUcee"
+      author: Daniluk et al.
+      url: "https://arxiv.org/abs/1702.04521"
+      citation: "ICLR 2017"
     - title: "Using fast weights to attend to the recent past"
+      author: Ba, Hinton, Minh, Leibo, Ionescu
       url: "https://arxiv.org/abs/1610.06258"
+      citation: "NIPS 2016"
 - title: Open vocabulary
   tag: openvocab
   include: true
@@ -274,8 +283,10 @@
   notes:
     - title: Learning to Create and Reuse Words in Open-Vocabulary Neural Language Modeling. 
       url: "http://aclweb.org/anthology/P17-1137"
+      author: "Kawakami, Dyer, Blunsom"
     - title: Reference-Aware Language Models. 
       url: "https://aclanthology.info/pdf/D/D17/D17-1197.pdf"
+      author: "Yang, Blunsom, Dyer, Ling"
 - title: Pointer networks
   tag: pointernet
   include: true
@@ -283,8 +294,10 @@
   notes:
     - title: Pointer Networks. 
       url: "https://arxiv.org/abs/1506.03134"
+      author: "Vinyals, Fortunato, Jaitly"
     - title: Pointer Sentinel Mixture Models. 
       url: "https://arxiv.org/abs/1609.07843"
+      author: "Merity, Xiong, Bradbury, Socher"
 - title: "n-gram Neural Language Models"
   tag: nnlm
   include: false
