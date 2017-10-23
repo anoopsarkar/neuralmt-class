@@ -235,6 +235,56 @@
       author: Eriguchi, Tsuruoka, Cho
       url: "https://arxiv.org/abs/1702.03525"
       citation: "ACL 2017" 
+- title: Positional encoding
+  tag: posenc
+  include: true
+  current: false
+  notes:
+    - title: Attention is all you need. 
+      url: "https://arxiv.org/abs/1706.03762"
+    - title: One model to learn them all. 
+      url: "https://arxiv.org/abs/1706.05137"
+  links:
+    - title: Tensor2Tensor. 
+      url: "https://github.com/tensorflow/tensor2tensor"
+- title: Sentence representations
+  tag: skipthought
+  include: true
+  current: false
+  notes:
+    - title: Learning Distributed Representations of Sentences from Unlabelled Data. 
+      url: "http://www.aclweb.org/anthology/N16-1162"
+    - title: Learning Generic Sentence Representations Using Convolutional Neural Networks. 
+      url: "http://aclweb.org/anthology/D/D17/D17-1253.pdf"
+    - title: Skip-thought vectors. 
+      url: "https://arxiv.org/abs/1506.06726"
+- title: Understanding attention
+  tag: shortattention
+  include: true
+  current: false
+  notes:
+    - title: Frustratingly Short Attention Spans in Neural Language Modeling. 
+      url: "http://openreview.net/pdf?id=ByIAPUcee"
+    - title: "Using fast weights to attend to the recent past"
+      url: "https://arxiv.org/abs/1610.06258"
+- title: Open vocabulary
+  tag: openvocab
+  include: true
+  current: false
+  notes:
+    - title: Learning to Create and Reuse Words in Open-Vocabulary Neural Language Modeling. 
+      url: "http://aclweb.org/anthology/P17-1137"
+    - title: Reference-Aware Language Models. 
+      url: "https://aclanthology.info/pdf/D/D17/D17-1197.pdf"
+- title: Pointer networks
+  tag: pointernet
+  include: true
+  current: false
+  notes:
+    - title: Pointer Networks. 
+      url: "https://arxiv.org/abs/1506.03134"
+    - title: Pointer Sentinel Mixture Models. 
+      url: "https://arxiv.org/abs/1609.07843"
 - title: "n-gram Neural Language Models"
   tag: nnlm
   include: false
