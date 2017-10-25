@@ -216,7 +216,7 @@
       author: Seraj, Siahbani, Sarkar
       url: "http://aclweb.org/anthology/D15-1163"
       citation: "EMNLP 2015"
-- title: "Stack LSTMs and NMT (<b>Tue</b> Oct 31 9:30am: J. Gu)"
+- title: "Stack LSTMs and NMT (Tue Oct 31 9:30am: J. Gu)"
   tag: stacklstms
   include: true
   current: false
