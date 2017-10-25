@@ -157,7 +157,7 @@
 - title: "Convolutional sequence to sequence learning (Oct 23: P. Gujjar)"
   tag: convonmt
   include: true
-  current: true
+  current: false
   notes:
     - author: Gehring, Auli, Grangier, Yarats, Dauphin
       title: "Convolutional sequence to sequence learning"
@@ -184,7 +184,7 @@
 - title: "Multi-lingual word embedding (Oct 25: R. Gunasekaran)"
   tag: wembs
   include: true
-  current: false
+  current: true
   notes:
     - title: "A survey of cross-lingual embedding models"
       author: S. Ruder
