@@ -102,6 +102,76 @@
       title: "Understanding LSTMs"
       url: "http://colah.github.io/posts/2015-08-Understanding-LSTMs/"
       optional: true
+- title: "Sequence to Sequence RNNs"
+  tag: seq2seq
+  include: true
+  current: false
+  notes:
+    - author: "Sutskever et al"
+      title: "Sequence to Sequence Learning with Neural Networks"
+      citation: "NIPS 2014"
+      url: "http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf"
+      video: "https://www.microsoft.com/en-us/research/video/nips-oral-session-4-ilya-sutskever/"
+    - author: "Cho et al"
+      title: "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation"
+      url: "https://arxiv.org/abs/1406.1078"
+      citation: "EMNLP 2014"
+    - author: "Vinyals et al"
+      title: "Grammar as a foreign language"
+      url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
+      citation: "ICLR 2015 **submission** (this version has no attention model)"
+  links:
+    - author: "Gu et al"
+      title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
+      url: "http://arxiv.org/pdf/1603.06393.pdf"
+      citation: "ACL 2016"
+- title: "Attention"
+  tag: attn
+  include: true
+  current: false
+  notes:
+    - author: "Bahdanau et al"
+      title: "Neural Translation by Jointly Learning to Align and Translate"
+      citation: "ICLR 2015"
+      url: "http://arxiv.org/pdf/1409.0473.pdf"
+    - author: "Luong et al"
+      title: "Effective Approaches to Attention-based Neural Machine Translation"
+      citation: "ACL 2015"
+      url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
+    - author: "Jean et al"
+      title: "On using very large target vocabulary for neural machine translation"
+      citation: "ACL 2015"
+      url: "http://www.aclweb.org/anthology/P15-1001"
+    - author: "Zhou et al"
+      title: "Deep Recurrent Models with Fast-Forward Connections for Neural Machine Translation"
+      url: "https://arxiv.org/abs/1606.04199"
+      citation: "TACL 2016"
+  links:
+    - author: "Vinyals et al"
+      title: "Grammar as a Foreign Language"
+      citation: "arXiv (this version has attention)"
+      url: "https://arxiv.org/pdf/1412.7449.pdf"
+- title: "Visual Attention"
+  tag: vision
+  include: false
+  current: false
+  notes:
+    - author: "Mnih et al"
+      citation: "NIPS 2014"
+      title: "Recurrent Models of Visual Attention"
+      url: "http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf"
+    - author: "Xu et al"
+      citation: "ICML 2015"
+      title: "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
+      url: "http://jmlr.org/proceedings/papers/v37/xuc15.pdf"
+    - author: "Donahue et al" 
+      title: "Long-term Recurrent Convolutional Networks for Visual Recognition and Description" 
+      citation: "CVPR 2015"
+      url: "https://arxiv.org/abs/1411.4389"
+    - author: "Gregor et al"
+      title: "DRAW: A recurrent neural network for image generation"
+      citation: "ICML 2015"
+      url: "https://arxiv.org/abs/1502.04623"
 - title: "Multilingual NMT (Oct 11: Nishant K.)"
   tag: multiling
   include: true
@@ -373,76 +443,6 @@
       url: "https://www.youtube.com/watch?v=VINCQghQRuM"
       author: "Alec Radford"
       video: "https://www.youtube.com/watch?v=VINCQghQRuM"
-- title: "Sequence to Sequence RNNs"
-  tag: seq2seq
-  include: false
-  current: false
-  notes:
-    - author: "Sutskever et al"
-      title: "Sequence to Sequence Learning with Neural Networks"
-      citation: "NIPS 2014"
-      url: "http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf"
-      video: "https://www.microsoft.com/en-us/research/video/nips-oral-session-4-ilya-sutskever/"
-    - author: "Cho et al"
-      title: "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation"
-      url: "https://arxiv.org/abs/1406.1078"
-      citation: "EMNLP 2014"
-    - author: "Vinyals et al"
-      title: "Grammar as a foreign language"
-      url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43799.pdf"
-      citation: "ICLR 2015 **submission** (this version has no attention model)"
-  links:
-    - author: "Gu et al"
-      title: "Incorporating Copying Mechanism in Sequence-to-Sequence Learning"
-      url: "http://arxiv.org/pdf/1603.06393.pdf"
-      citation: "ACL 2016"
-- title: "Attention"
-  tag: attn
-  include: false
-  current: false
-  notes:
-    - author: "Bahdanau et al"
-      title: "Neural Translation by Jointly Learning to Align and Translate"
-      citation: "ICLR 2015"
-      url: "http://arxiv.org/pdf/1409.0473.pdf"
-    - author: "Luong et al"
-      title: "Effective Approaches to Attention-based Neural Machine Translation"
-      citation: "ACL 2015"
-      url: "http://aclweb.org/anthology/D/D15/D15-1166.pdf"
-    - author: "Jean et al"
-      title: "On using very large target vocabulary for neural machine translation"
-      citation: "ACL 2015"
-      url: "http://www.aclweb.org/anthology/P15-1001"
-    - author: "Zhou et al"
-      title: "Deep Recurrent Models with Fast-Forward Connections for Neural Machine Translation"
-      url: "https://arxiv.org/abs/1606.04199"
-      citation: "TACL 2016"
-  links:
-    - author: "Vinyals et al"
-      title: "Grammar as a Foreign Language"
-      citation: "arXiv (this version has attention)"
-      url: "https://arxiv.org/pdf/1412.7449.pdf"
-- title: "Visual Attention"
-  tag: vision
-  include: false
-  current: false
-  notes:
-    - author: "Mnih et al"
-      citation: "NIPS 2014"
-      title: "Recurrent Models of Visual Attention"
-      url: "http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf"
-    - author: "Xu et al"
-      citation: "ICML 2015"
-      title: "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
-      url: "http://jmlr.org/proceedings/papers/v37/xuc15.pdf"
-    - author: "Donahue et al" 
-      title: "Long-term Recurrent Convolutional Networks for Visual Recognition and Description" 
-      citation: "CVPR 2015"
-      url: "https://arxiv.org/abs/1411.4389"
-    - author: "Gregor et al"
-      title: "DRAW: A recurrent neural network for image generation"
-      citation: "ICML 2015"
-      url: "https://arxiv.org/abs/1502.04623"
 - title: "Sequence Labelling using RNNs"
   include: false
   current: false
