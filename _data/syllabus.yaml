@@ -259,6 +259,24 @@
       citation: "arXiv 1705.07860"
     - title: "Friends don’t let friends write batching code"
       url: "http://dynet.readthedocs.io/en/latest/tutorials_notebooks/Autobatching.html"
+- title: "Sentence representations (Nov 13: T. Elganainy)"
+  tag: skipthought
+  include: true
+  current: false
+  notes:
+    - title: Learning Distributed Representations of Sentences from Unlabelled Data. 
+      author: Hill, Cho, Korhonen
+      url: "http://www.aclweb.org/anthology/N16-1162"
+    - title: Learning Generic Sentence Representations Using Convolutional Neural Networks. 
+      author: Gan et al.
+      url: "http://aclweb.org/anthology/D/D17/D17-1253.pdf"
+    - title: Skip-thought vectors. 
+      author: Kiros et al.
+      url: "https://arxiv.org/abs/1506.06726"
+  links:
+    - title: "Aetherial Symbols"
+      author: "G. Hinton"
+      url: "https://drive.google.com/file/d/0B8i61jl8OE3XdHRCSkV1VFNqTWc/view"
 - title: Positional encoding
   tag: posenc
   include: true
@@ -273,20 +291,6 @@
   links:
     - title: Tensor2Tensor
       url: "https://github.com/tensorflow/tensor2tensor"
-- title: Sentence representations
-  tag: skipthought
-  include: true
-  current: false
-  notes:
-    - title: Learning Distributed Representations of Sentences from Unlabelled Data. 
-      author: Hill, Cho, Korhonen
-      url: "http://www.aclweb.org/anthology/N16-1162"
-    - title: Learning Generic Sentence Representations Using Convolutional Neural Networks. 
-      author: Gan et al.
-      url: "http://aclweb.org/anthology/D/D17/D17-1253.pdf"
-    - title: Skip-thought vectors. 
-      author: Kiros et al.
-      url: "https://arxiv.org/abs/1506.06726"
 - title: Open vocabulary
   tag: openvocab
   include: true
