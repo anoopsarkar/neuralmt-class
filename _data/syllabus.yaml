@@ -235,7 +235,7 @@
       author: Eriguchi, Tsuruoka, Cho
       url: "https://arxiv.org/abs/1702.03525"
       citation: "ACL 2017" 
-- title: Understanding attention (Nov 6: P. Batta)
+- title: "Understanding attention (Nov 6: P. Batta)"
   tag: shortattention
   include: true
   current: false
@@ -248,7 +248,7 @@
       author: Ba, Hinton, Minh, Leibo, Ionescu
       url: "https://arxiv.org/abs/1610.06258"
       citation: "NIPS 2016"
-- title: GPU Training for Encoder-Decoder networks (Nov 8: N. Vedula)
+- title: "GPU Training for Encoder-Decoder networks (Nov 8: N. Vedula)"
   tag: autobatch
   include: true
   current: false
