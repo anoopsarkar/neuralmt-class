@@ -235,6 +235,30 @@
       author: Eriguchi, Tsuruoka, Cho
       url: "https://arxiv.org/abs/1702.03525"
       citation: "ACL 2017" 
+- title: Understanding attention (Nov 6: P. Batta)
+  tag: shortattention
+  include: true
+  current: false
+  notes:
+    - title: Frustratingly Short Attention Spans in Neural Language Modeling. 
+      author: Daniluk et al.
+      url: "https://arxiv.org/abs/1702.04521"
+      citation: "ICLR 2017"
+    - title: "Using fast weights to attend to the recent past"
+      author: Ba, Hinton, Minh, Leibo, Ionescu
+      url: "https://arxiv.org/abs/1610.06258"
+      citation: "NIPS 2016"
+- title: GPU Training for Encoder-Decoder networks (Nov 8: N. Vedula)
+  tag: autobatch
+  include: true
+  current: false
+  notes:
+    - title: "On-the-fly Operation Batching in Dynamic Computation Graphs"
+      url: "https://arxiv.org/abs/1705.07860"
+      author: "G. Neubig, Y. Goldberg, C. Dyer"
+      citation: "arXiv 1705.07860"
+    - title: "Friends don’t let friends write batching code"
+      url: "http://dynet.readthedocs.io/en/latest/tutorials_notebooks/Autobatching.html"
 - title: Positional encoding
   tag: posenc
   include: true
@@ -263,19 +287,6 @@
     - title: Skip-thought vectors. 
       author: Kiros et al.
       url: "https://arxiv.org/abs/1506.06726"
-- title: Understanding attention
-  tag: shortattention
-  include: true
-  current: false
-  notes:
-    - title: Frustratingly Short Attention Spans in Neural Language Modeling. 
-      author: Daniluk et al.
-      url: "https://arxiv.org/abs/1702.04521"
-      citation: "ICLR 2017"
-    - title: "Using fast weights to attend to the recent past"
-      author: Ba, Hinton, Minh, Leibo, Ionescu
-      url: "https://arxiv.org/abs/1610.06258"
-      citation: "NIPS 2016"
 - title: Open vocabulary
   tag: openvocab
   include: true
