@@ -10,7 +10,7 @@ active_tab: project
 Final Project
 -------------
 
-<p class="text-muted">Due on December 15, 2016</p>
+<p class="text-muted">Due on December 15, 2017</p>
 
 The goal for each final project is a submission to a conference at the end of the semester (perhaps with some more work on the paper in the Spring semester).
 
