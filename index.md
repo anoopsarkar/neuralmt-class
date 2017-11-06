@@ -42,8 +42,8 @@ Grading
 
 * In class presentations: 40%
 * Discussion board: 20%
-* Project proposal: 10% (Nov 19, 2017)
-* Final project: 30%. Due on December 8, 2017
+* Project proposal: 10% (Nov 19, 2017) use the same submission format as the [final project](project.html)
+* [Final project](project.html): 30%. Due on December 8, 2017
 
 Presentation Sign-up
 : [Sign-up](https://docs.google.com/spreadsheets/d/1WVTtcJLLK_RlhzSeZmdIveAPjga-tjecqvV-deOG16g/edit?usp=sharing)
