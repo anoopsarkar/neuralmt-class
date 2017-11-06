@@ -317,6 +317,7 @@
     - title: "Key-Value Memory Networks for Directly Reading Documents"
       author: Miller et. al.
       url: "http://www.aclweb.org/anthology/D16-1147"
+      citation: "EMNLP 2016"
     - title: "Using fast weights to attend to the recent past"
       author: Ba, Hinton, Minh, Leibo, Ionescu
       url: "https://arxiv.org/abs/1610.06258"
