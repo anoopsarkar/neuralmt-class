@@ -545,3 +545,11 @@
       title: "Recurrent Neural Network Grammars"
       url: "https://arxiv.org/abs/1602.07776"
       citation: "NAACL 2016"
+- title: "Unsupervised NMT"
+  tag: unsupnmt
+  include: true
+  current: false
+  notes:
+    - author: "Lample, Denoyer, Ranzato"
+      title: "Unsupervised Machine Translation Using Monolingual Corpora Only"
+      url: "https://arxiv.org/abs/1711.00043"
