@@ -334,7 +334,7 @@
       citation: "arXiv 1705.07860"
     - title: "Friends don’t let friends write batching code"
       url: "http://dynet.readthedocs.io/en/latest/tutorials_notebooks/Autobatching.html"
-- title: "Sentence representations (Nov 13: T. Elganainy)"
+- title: "Sentence representations (Nov 15: T. Elganainy)"
   tag: skipthought
   include: true
   current: false
