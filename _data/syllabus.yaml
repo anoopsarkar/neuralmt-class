@@ -314,6 +314,9 @@
       author: Daniluk et al.
       url: "https://arxiv.org/abs/1702.04521"
       citation: "ICLR 2017"
+    - title: "Key-Value Memory Networks for Directly Reading Documents"
+      author: Miller et. al.
+      url: "http://www.aclweb.org/anthology/D16-1147"
     - title: "Using fast weights to attend to the recent past"
       author: Ba, Hinton, Minh, Leibo, Ionescu
       url: "https://arxiv.org/abs/1610.06258"
