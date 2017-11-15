@@ -308,7 +308,7 @@
 - title: "Understanding attention (Nov 6: P. Batta)"
   tag: shortattention
   include: true
-  current: true
+  current: false
   notes:
     - title: Frustratingly Short Attention Spans in Neural Language Modeling. 
       author: Daniluk et al.
@@ -337,7 +337,7 @@
 - title: "Sentence representations (Nov 15: T. Elganainy)"
   tag: skipthought
   include: true
-  current: false
+  current: true
   notes:
     - title: Learning Distributed Representations of Sentences from Unlabelled Data. 
       author: Hill, Cho, Korhonen
