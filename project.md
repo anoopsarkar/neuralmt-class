@@ -48,10 +48,10 @@ and tables it is better to use either
 [kramdown](https://github.com/gettalong/kramdown).  Do __not__ use
 any proprietary or binary file formats such as Microsoft Word.
 
-If you use latex then use the following style files:
+If you use latex then use the following style files from the Submission Format section:
 
-* [acl2012.sty]({{ site.baseurl }}/assets/project/acl2012.sty)
-* [acl2012.bst]({{ site.baseurl }}/assets/project/acl2012.bst)
+* [Latex style files](https://transacl.org/ojs/index.php/tacl/about/submissions)
+* [MS Word](https://transacl.org/ojs/index.php/tacl/about/submissions)
 
 Here is an example of using these style files:
 
@@ -84,12 +84,9 @@ The final projects will be graded using the following criteria:
 
 ## Examples
 
-Here are some examples of good project submissions. They are both published papers but give you a good idea of 
-how to write your project report. You can take inspiration for how to write a polished report from these
-examples but make sure you have the sections required by the Write-up section above.
+Here is an example of good project submissions. Make sure you have the sections required by the Write-up section above.
 
-* [Example 1 by David Chiang and Steve DeNeefe and Michael Pust]({{ site.baseurl }}/assets/project/P11-2080.pdf)
-* [Example 2 by Dong Song and Anoop Sarkar]({{ site.baseurl }}/assets/project/sighan08.pdf)
+* [Example 2 by Dong Song and Anoop Sarkar](http://anoopsarkar.github.io/papers/pdf/sighan08.pdf)
 
 ## Data
 
